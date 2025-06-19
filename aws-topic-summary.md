@@ -26,5 +26,14 @@
 | **ALB (Application LB)**       | Layer 7 HTTP/HTTPS, content-based routing, supports WAF                                                                             |
 | **NLB (Network LB)**           | Layer 4 TCP/UDP, ultra-high performance, static IP                                                                                  |
 | **Auto Scaling Group**         | Auto-manages EC2 fleet size based on rules, improves cost and availability                                                          |
-
+| **VPC**              | Isolated virtual network in AWS                       |
+| **Public Subnet**    | Has internet access via Internet Gateway              |
+| **Private Subnet**   | No internet unless via NAT Gateway                    |
+| **Route Table**      | Determines where traffic is routed                    |
+| **Internet Gateway** | Enables internet access for VPC                       |
+| **NAT Gateway**      | Private subnet access to internet (outbound only)     |
+| **Flow Logs**        | Log VPC traffic metadata                              |
+| **VPC Peering**      | Private communication between VPCs                    |
+| **VPC Endpoints**    | Private connection to AWS services                    |
+| **Elastic IP**       | Static public IP for EC2, useful for fixed addressing |
 
