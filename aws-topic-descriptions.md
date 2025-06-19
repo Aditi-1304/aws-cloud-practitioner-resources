@@ -133,3 +133,85 @@ Object storage service for any type of data.
 * **Temporary block-level storage**.
 * High speed, but **data lost** when instance is stopped, terminated, or crashes.
 * Useful for temporary caching, buffers.
+
+---
+
+### **6. AWS CAF (Cloud Adoption Framework)**
+
+The **AWS Cloud Adoption Framework** helps organizations **successfully migrate to the cloud** by providing structured **guidance** across key business areas.
+
+#### ▸ **Six CAF Perspectives**:
+
+| Perspective    | Focus                                                      |
+| -------------- | ---------------------------------------------------------- |
+| **Business**   | Business goals, value realization, cost management         |
+| **People**     | Training, organizational change, roles & responsibilities  |
+| **Governance** | Compliance, risk, and cloud policies                       |
+| **Platform**   | Cloud architecture, infrastructure, and deployment         |
+| **Security**   | Identity, access, detection, protection, incident response |
+| **Operations** | Ongoing monitoring, support, and operations processes      |
+
+CAF helps organizations build a **cloud migration strategy** and **align IT with business objectives**.
+
+---
+
+### **7. AWS Well-Architected Framework: Six Pillars**
+
+Helps design **secure, high-performing, resilient, and efficient** cloud architectures.
+
+#### ▸ **Six Pillars**:
+
+| Pillar                     | Description                                          |
+| -------------------------- | ---------------------------------------------------- |
+| **Operational Excellence** | Monitor and improve systems, automate changes        |
+| **Security**               | Protect data, systems, and assets                    |
+| **Reliability**            | Ensure workload performs as intended and can recover |
+| **Performance Efficiency** | Use resources efficiently and scale to meet demand   |
+| **Cost Optimization**      | Avoid unnecessary costs                              |
+| **Sustainability**         | Minimize environmental impacts of workloads          |
+
+Each pillar includes **best practices**, **design principles**, and **questions** to assess and improve your architecture.
+
+---
+
+### **8. Load Balancer (Elastic Load Balancing)**
+
+Distributes incoming traffic across **multiple targets** (e.g., EC2 instances) to improve **availability**, **fault tolerance**, and **performance**.
+
+#### ▸ **Application Load Balancer (ALB)**
+
+* **Layer 7 (HTTP/HTTPS)** aware.
+* Supports **host-based and path-based routing**.
+* Used for web applications, REST APIs, microservices.
+* Integrates with **WAF**, **SSL termination**, and **container-based apps**.
+
+#### ▸ **Network Load Balancer (NLB)**
+
+* **Layer 4 (TCP/UDP)** load balancing.
+* Handles **high-performance** and **low-latency** traffic.
+* Used for applications requiring **static IPs** and high throughput.
+* Scales to **millions of requests per second**.
+
+---
+
+### **10. Auto Scaling Group (ASG)**
+
+Automatically adds or removes **EC2 instances** based on **demand** or **defined conditions** (like CPU usage or time schedules).
+
+#### ▸ Key Features:
+
+* Ensures **availability and cost-efficiency**.
+* Works with **CloudWatch alarms** for dynamic scaling.
+* Can be used with **ALB** to distribute traffic to new instances.
+* Defines:
+
+  * **Min**, **Max**, and **Desired** number of instances.
+  * **Scaling policies** (manual, scheduled, or dynamic).
+
+#### ▸ Benefits:
+
+* **Resilience**: Replaces unhealthy instances.
+* **Cost-effective**: Scales out/in based on need.
+
+---
+
