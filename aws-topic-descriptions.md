@@ -215,3 +215,84 @@ Automatically adds or removes **EC2 instances** based on **demand** or **defined
 
 ---
 
+### **11. AWS VPC (Virtual Private Cloud)**
+
+A **VPC** is your own **isolated network** within AWS where you can launch AWS resources (e.g., EC2, RDS).
+
+#### ▸ **Public Subnet**
+
+* **Accessible from the internet**.
+* Typically hosts **web servers**, **ALBs**, etc.
+* Requires:
+
+  * **Internet Gateway**
+  * **Route table entry to Internet Gateway**
+
+#### ▸ **Private Subnet**
+
+* **No direct internet access**.
+* Used for **databases**, **backend servers**, etc.
+* Can **access internet** using a **NAT Gateway** (for updates or outbound traffic).
+
+#### ▸ **Route Table**
+
+* Controls **network traffic routing**.
+* Each subnet must be associated with a **route table**.
+* Routes specify where traffic is sent (e.g., to Internet Gateway, NAT, VPC Peering).
+
+---
+
+### **12. Internet Gateway (IGW)**
+
+* A **managed gateway** that connects your **VPC to the internet**.
+* Required for **outbound and inbound** internet access to/from **public subnets**.
+* Must be **attached to the VPC** and **used in route tables**.
+
+---
+
+### **13. NAT Gateway (Network Address Translation)**
+
+* Enables instances in a **private subnet** to **access the internet** for things like OS updates or downloading packages.
+* **Prevents internet-initiated inbound traffic** (i.e., maintains privacy).
+* Must be placed in a **public subnet**.
+* **Paid AWS managed service**, scales automatically.
+
+---
+
+### **14. VPC Advanced Features**
+
+#### ▸ **Flow Logs**
+
+* Captures **network traffic metadata** for:
+
+  * Security analysis
+  * Troubleshooting
+  * Compliance
+* Logs stored in **CloudWatch** or **S3**.
+
+#### ▸ **VPC Peering**
+
+* Connects **two VPCs** to communicate **privately** using **AWS backbone**.
+* Peered VPCs can be in **same or different regions/accounts**.
+* **No transitive peering**: VPC A ↔ VPC B ↔ VPC C does NOT mean A ↔ C.
+
+#### ▸ **VPC Endpoints**
+
+* Allow **private connection** to AWS services (e.g., S3, DynamoDB) **without using the internet**.
+* Two types:
+
+  * **Interface endpoint**: Powered by **ENI (Elastic Network Interface)**.
+  * **Gateway endpoint**: Used for **S3 & DynamoDB**.
+
+---
+
+### **15. Elastic IP**
+
+* A **static, public IPv4 address** that you can assign to an EC2 instance.
+* Useful when you need a **fixed IP** for external access.
+* Can **reassociate** it if an instance is stopped or terminated.
+* **Limited by default**, charges apply if **not in use**.
+
+---
+
+
