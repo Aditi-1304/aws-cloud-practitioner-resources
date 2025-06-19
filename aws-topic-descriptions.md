@@ -295,4 +295,71 @@ A **VPC** is your own **isolated network** within AWS where you can launch AWS r
 
 ---
 
+### **16. AWS PrivateLink**
+
+* Allows you to **privately access services** hosted in **another VPC** or **AWS service** using **private IPs**.
+* Uses **interface VPC endpoints** (powered by ENIs).
+* Traffic **stays within the AWS network**, not over the public internet.
+* Common use: Accessing services like **S3**, **SNS**, or **3rd-party SaaS apps** securely.
+
+▸ **Key Benefit**: **Secure**, **private**, and **scalable** connectivity to services **without exposing traffic to the internet**.
+
+---
+
+### **17. Site-to-Site VPN & AWS Direct Connect**
+
+#### ▸ **Site-to-Site VPN**
+
+* Creates a **secure encrypted tunnel** between **your on-premises network** and **AWS VPC** over the **public internet**.
+* Uses **IPSec**.
+* Easy to set up and **cost-effective**, but may have **latency** or **bandwidth fluctuations**.
+
+#### ▸ **AWS Direct Connect**
+
+* Provides a **dedicated physical connection** from your on-premises data center to AWS.
+* **More reliable**, **lower latency**, and **higher bandwidth** than VPN.
+* Used when you need **stable, consistent network performance** (e.g., for large data transfers, hybrid cloud setups).
+
+---
+
+### **18. AWS Client VPN**
+
+* A **managed VPN service** that allows **remote users (e.g., employees)** to securely connect to AWS or on-premises networks.
+* **OpenVPN-based** and supports **multi-factor authentication (MFA)**.
+* Scales automatically and supports **access from laptops, desktops, etc.**
+
+▸ Think: **Site-to-Site = office to AWS**,
+**Client VPN = remote worker to AWS**.
+
+---
+
+### **19. AWS Transit Gateway**
+
+* A **central hub** to connect **multiple VPCs**, **on-prem networks**, and **VPNs**.
+* Replaces the need for **complex VPC peering** (which is 1-to-1).
+* Uses a **hub-and-spoke** model.
+* Simplifies **routing**, **security**, and **management** across large architectures.
+
+▸ Scales well for **enterprise and hybrid cloud** setups.
+
+---
+
+### **20. AWS Global Infrastructure**
+
+The **foundation of AWS services worldwide**, designed for **resilience, low latency, and compliance**.
+
+#### ▸ Key Components:
+
+| Component                    | Description                                                                          |
+| ---------------------------- | ------------------------------------------------------------------------------------ |
+| **Regions**                  | Geographically isolated locations (e.g., `us-east-1`, `ap-south-1`)                  |
+| **Availability Zones (AZs)** | Physically separated data centers within a region (min 2, usually 3)                 |
+| **Edge Locations**           | Global CDN endpoints for low-latency content delivery (used by CloudFront, Route 53) |
+| **Local Zones**              | Extend AWS closer to end-users in large metro areas                                  |
+| **Wavelength Zones**         | For ultra-low-latency applications with **5G networks**                              |
+
+▸ AWS designs infrastructure for **high availability, fault tolerance, and redundancy**.
+
+---
+
 
