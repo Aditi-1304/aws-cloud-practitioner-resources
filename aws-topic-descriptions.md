@@ -362,4 +362,91 @@ The **foundation of AWS services worldwide**, designed for **resilience, low lat
 
 ---
 
+### **21. Amazon CloudFront**
+
+A **Content Delivery Network (CDN)** that delivers **web content, videos, APIs**, and other assets to users **faster** by caching them at **edge locations**.
+
+#### ▸ Key Points:
+
+* Uses a **global network of edge locations** (200+ worldwide).
+* Reduces **latency** and **server load**.
+* Integrates with **S3**, **ALB**, **EC2**, and **Route 53**.
+* Supports **HTTPS**, **Geo-restriction**, and **DDoS protection** via AWS Shield.
+
+▸ **Use case**: Serving static assets for websites, streaming video, securing APIs.
+
+---
+
+### **22. Amazon Route 53**
+
+A **scalable and highly available Domain Name System (DNS)** web service.
+
+#### ▸ Key Functions:
+
+* **Domain Registration**: Buy and manage domain names (e.g., `example.com`).
+* **DNS Resolution**: Converts domain names into IP addresses.
+* **Health Checks**: Route traffic only to healthy resources.
+* **Routing Policies**:
+
+  * **Simple routing**
+  * **Failover routing**
+  * **Latency-based routing**
+  * **Geolocation routing**
+  * **Weighted routing**
+
+▸ **Use case**: Directing user traffic to the nearest or healthiest AWS resource (e.g., EC2 or ALB).
+
+---
+
+### **23. AWS CloudFormation**
+
+A service that helps you **automate infrastructure deployment** using **code (Infrastructure as Code – IaC)**.
+
+#### ▸ How it works:
+
+* You define resources (EC2, S3, IAM, etc.) in a **YAML/JSON template**.
+* CloudFormation creates and manages them automatically.
+
+▸ **Key Benefits**:
+
+* **Repeatability**: Same setup in dev/test/prod.
+* **Automation**: No manual provisioning.
+* **Rollback support**: Automatically reverts on failure.
+
+---
+
+### **24. AWS Cloud Development Kit (CDK)**
+
+A **software development framework** to define AWS infrastructure using **programming languages** like **Python, TypeScript, Java, or C#**.
+
+#### ▸ Key Differences from CloudFormation:
+
+* CDK is **code-first**, CloudFormation is **declarative**.
+* CDK synthesizes into a CloudFormation template under the hood.
+* Great for **developers comfortable with code**, supports abstraction and reuse.
+
+▸ **Use case**: Automating infrastructure with real programming logic and reusable constructs.
+
+---
+
+### **25. Amazon ElastiCache**
+
+A **fully managed in-memory data store** that boosts application performance by **caching frequently accessed data**.
+
+#### ▸ Two Engine Options:
+
+* **Redis**: Supports advanced data structures, pub/sub, backups.
+* **Memcached**: Simple and fast caching engine.
+
+#### ▸ Benefits:
+
+* **Low latency** data access (microseconds).
+* Reduces **load on databases**.
+* Supports **real-time apps**, leaderboards, session stores, etc.
+
+▸ **Use case**: Caching frequent queries, speeding up web apps, offloading DBs.
+
+---
+
+
 
