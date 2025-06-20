@@ -42,3 +42,9 @@
 | 38.       | **Client VPN**                 | Secure access for remote users to AWS                              |
 | 39.       | **Transit Gateway**            | Central hub for connecting multiple VPCs and networks              |
 | 40.       | **Global Infrastructure**      | Regions, AZs, Edge locations, built for resilience and low latency |
+| 41.       | **CloudFront**                 | CDN for low-latency content delivery, serve static content, media, APIs      |
+| 42.       | **Route 53**                   | DNS + domain management for domain routing, health checks          |
+| 43.       | **CloudFormation**             | Infrastructure as Code using templates that Automate AWS setup                     |
+| 44.       | **CDK**                        | Code-based infrastructure definition and is dev-friendly infrastructure automation |
+| 45.       | **ElastiCache**                | In-memory caching service that speed up DB queries and real-time apps |
+
