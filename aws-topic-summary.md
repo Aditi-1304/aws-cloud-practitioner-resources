@@ -47,4 +47,9 @@
 | 43.       | **CloudFormation**             | Infrastructure as Code using templates that Automate AWS setup                     |
 | 44.       | **CDK**                        | Code-based infrastructure definition and is dev-friendly infrastructure automation |
 | 45.       | **ElastiCache**                | In-memory caching service that speed up DB queries and real-time apps |
+| 46.       | **Elastic Beanstalk**          | PaaS to deploy full web apps it uploads code, AWS handles infra    |
+| 47.       | **CodeDeploy**                 | Automates deployment to EC2/Lambda and is safe, monitored code rollout      |
+| 48.       | **CodeCommit**                 | Git repo hosted on AWS that secures source code management     |
+| 49.       | **CodeBuild**                  | Compiles, tests, and packages code also automated build process           |
+| 50.       | **CodePipeline**               | CI/CD orchestration used to automate the entire release cycle |
 
