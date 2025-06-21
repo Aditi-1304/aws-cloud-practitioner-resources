@@ -448,5 +448,76 @@ A **fully managed in-memory data store** that boosts application performance by 
 
 ---
 
+### **26. AWS Elastic Beanstalk**
+
+A **Platform-as-a-Service (PaaS)** that lets you **deploy web applications** without managing servers, networking, or infrastructure.
+
+#### ▸ Key Features:
+
+* Supports **Java, Python, Node.js, PHP, .NET, Go, Ruby**, and Docker.
+* You just upload your code — AWS handles provisioning:
+
+  * EC2, ELB, Auto Scaling, RDS, etc.
+* You can still **access the infrastructure** (like EC2) if needed.
+
+▸ **Use case**: Quickly deploy a web app with minimal configuration.
+
+---
+
+### **27. AWS CodeDeploy**
+
+A **deployment automation tool** that helps you **deploy code to EC2, Lambda, or on-prem servers** safely and consistently.
+
+#### ▸ Features:
+
+* Supports **rolling updates**, **blue/green deployments**, and **canary releases**.
+* Minimizes **downtime** and supports **automatic rollback** if something fails.
+* Tracks **deployment status** and logs.
+
+▸ **Use case**: Automated code rollout to your servers or serverless apps.
+
+---
+
+### **28. AWS CodeCommit**
+
+A **fully managed Git-based source code repository** similar to GitHub or GitLab.
+
+#### ▸ Key Points:
+
+* **Secure** (integrates with IAM).
+* No size limits on repos or files.
+* Code is stored **privately in AWS**.
+
+▸ **Use case**: Store source code, track versions, and collaborate with your team on AWS.
+
+---
+
+### **29. AWS CodeBuild**
+
+A **build service** that compiles source code, runs tests, and produces artifacts.
+
+#### ▸ How it fits in DevOps:
+
+* Runs as part of CI/CD pipeline.
+* You define **build commands** in a `buildspec.yml` file.
+* Scales automatically and **charges by the minute**.
+
+▸ **Use case**: Compile code, run tests, and package the app automatically after every change.
+
+---
+
+### **30. AWS CodePipeline**
+
+A **CI/CD service** to **automate the full software release process**.
+
+#### ▸ Key Concepts:
+
+* Connects **CodeCommit** → **CodeBuild** → **CodeDeploy** into stages.
+* Automatically runs each stage on code change.
+* Supports integration with **GitHub, Jenkins**, third-party tools.
+
+▸ **Use case**: Automate and visualize your app release pipeline from source to deployment.
+
+---
 
 
