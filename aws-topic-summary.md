@@ -52,4 +52,9 @@
 | 48.       | **CodeCommit**                 | Git repo hosted on AWS that secures source code management     |
 | 49.       | **CodeBuild**                  | Compiles, tests, and packages code also automated build process           |
 | 50.       | **CodePipeline**               | CI/CD orchestration used to automate the entire release cycle |
+| 51.       | **CodeArtifact**               | Artifact/package repo that store and share app dependencies       |
+| 52.       | **SSM**                        | Central system management used to patch, access, configure EC2s          |
+| 53.       | **S3 Transfer Acceleration**   | Speed up S3 uploads used to upload large files globally            |
+| 54.       | **Global Accelerator**         | Boost global app performance used to low-latency access to dynamic apps     |
+| 55.       | **Outposts**                   | AWS services on-premises used to run AWS locally with cloud integration |
 
