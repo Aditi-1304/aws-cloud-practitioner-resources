@@ -520,4 +520,70 @@ A **CI/CD service** to **automate the full software release process**.
 
 ---
 
+### **31. AWS CodeArtifact**
+
+A **fully managed software artifact repository** for storing packages (dependencies) used in development.
+
+#### ▸ Supports:
+
+* **Maven, npm, PyPI, NuGet** (JavaScript, Python, Java, .NET)
+* Integrates with **CodeBuild**, **CodePipeline**
+
+▸ **Use Case**: Share and manage **build dependencies** across teams or projects securely.
+
+---
+
+### **32. AWS Systems Manager (SSM)**
+
+A **central management service** for AWS infrastructure — think of it as a *Swiss Army knife* for system admins.
+
+#### ▸ Key Features:
+
+* **Session Manager**: Secure shell access (SSH-less) to EC2.
+* **Run Command**: Execute shell commands across multiple EC2 instances.
+* **Patch Manager**: Automate OS patching.
+* **Parameter Store**: Securely store configuration variables like API keys.
+
+▸ **Use Case**: Operate, secure, and automate large-scale EC2 and hybrid environments.
+
+---
+
+### **33. S3 Transfer Acceleration**
+
+Speeds up **uploading large files to S3 buckets** over long distances using Amazon's **global edge network**.
+
+#### ▸ How it works:
+
+* Users upload to a **nearby AWS edge location** (like CloudFront).
+* Data is then transferred quickly through AWS’s **backbone network** to your S3 bucket.
+
+▸ **Use Case**: Upload files from far-away locations (e.g., from India to a US S3 bucket) **faster** than regular internet uploads.
+
+---
+
+### **34. AWS Global Accelerator**
+
+Improves **performance and availability** of global applications by **routing traffic through the AWS global network**.
+
+#### ▸ Features:
+
+* Uses **static IPs** that route users to the **optimal AWS endpoint**.
+* Unlike CloudFront (which caches content), Global Accelerator accelerates **non-cacheable, dynamic content** (like APIs).
+
+▸ **Use Case**: Real-time applications (like gaming, streaming, APIs) that need **global, low-latency access**.
+
+---
+
+### **35. AWS Outposts**
+
+Brings **AWS infrastructure and services to your on-premises** data center.
+
+#### ▸ What It Does:
+
+* You run AWS services **locally** while staying connected to the **AWS cloud**.
+* Supports services like EC2, EBS, RDS, S3, and ECS locally.
+
+▸ **Use Case**: Companies needing **low latency**, **data residency**, or operating in areas with **limited AWS region access**.
+
+---
 
