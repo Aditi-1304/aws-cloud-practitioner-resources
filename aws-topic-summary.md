@@ -62,5 +62,9 @@
 | 58.       | **Shared Responsibility Model** | Defines security roles used for AWS secures infra; you secure data/config |
 | 59.       | **DDoS Protection**            | Infra absorbs attack traffic used to protect your apps’ availability          |
 | 60.       | **AWS Shield**                 | DDoS protection service used for auto-protection + paid advanced option    |
-
+| 61.       | **Network Firewall**    | Deep VPC-level traffic inspection used for advanced control over subnet traffic   |
+| 62.       | **Firewall Manager**    | Central firewall policy manager used to apply security rules across accounts   |
+| 63.       | **Penetration Testing** | Ethical hacking (allowed on some services) used to test your own AWS setup for weaknesses |
+| 64.       | **AWS KMS**             | Manage encryption keys used to encrypt S3, EBS, RDS, Lambda securely  |
+| 65.       | **CloudTrail**          | Logs all AWS account activity used to audit, security monitoring, compliance |
 
