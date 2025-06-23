@@ -587,3 +587,83 @@ Brings **AWS infrastructure and services to your on-premises** data center.
 
 ---
 
+### **36. AWS Wavelength**
+
+Brings **AWS services to telecom 5G networks** for **ultra-low-latency** applications.
+
+#### ▸ Key Points:
+
+* Deployed in **Wavelength Zones** inside **telecom provider data centers**.
+* Ideal for apps like **AR/VR, IoT, video streaming, real-time gaming**.
+* Keeps traffic closer to end users, bypassing long internet routes.
+
+▸ **Use case**: Deliver **real-time services over 5G** with extremely low latency (single-digit milliseconds).
+
+---
+
+### **37. AWS Local Zones**
+
+AWS infrastructure that brings **compute, storage, database** services **closer to large population centers**.
+
+#### ▸ Key Points:
+
+* Extends AWS regions to **cities where there's no full region**.
+* Reduces **latency** for end-users in metros like Los Angeles, Mumbai, etc.
+* You can run services like **EC2, EBS, ELB, RDS, ECS** locally.
+
+▸ **Use case**: Latency-sensitive workloads (like video editing, gaming) in cities **far from existing AWS regions**.
+
+---
+
+### **38. AWS Shared Responsibility Model**
+
+Explains **who is responsible** for what in AWS: **AWS vs. YOU (the customer)**.
+
+#### ▸ AWS is responsible for:
+
+* **Security “of” the cloud**: physical infrastructure, networking, hardware, managed services (like RDS platform).
+
+#### ▸ Customer is responsible for:
+
+* **Security “in” the cloud**: your data, access controls, OS patching (for EC2), configuration, IAM, etc.
+
+#### ▸ Examples:
+
+| Service | AWS is responsible for                      | Customer is responsible for                  |
+| ------- | ------------------------------------------- | -------------------------------------------- |
+| **RDS** | DB engine patching, backups, infrastructure | Data security, access via IAM, DB configs    |
+| **S3**  | Physical storage, replication               | Bucket policies, data encryption, versioning |
+
+▸ **Exam Tip**: AWS handles the infra, you handle access, config, and data.
+
+---
+
+### **39. DDoS Protection**
+
+A **Distributed Denial of Service (DDoS)** attack floods a server or app with massive traffic, disrupting availability.
+
+#### ▸ AWS Protects You By:
+
+* Built-in protections with **Route 53, CloudFront, ELB**.
+* Using **scalable and redundant infrastructure** to absorb traffic.
+* Integrating services like **AWS Shield** and **WAF (Web App Firewall)**.
+
+▸ **Use case**: Automatically protect high-traffic apps from malicious spikes.
+
+---
+
+### **40. AWS Shield**
+
+A **managed DDoS protection service** for AWS-hosted applications.
+
+#### ▸ Two Tiers:
+
+| Tier                | Description                                                                                            |
+| ------------------- | ------------------------------------------------------------------------------------------------------ |
+| **Shield Standard** | Free for all AWS users. Automatically protects against common, low-volume attacks.                     |
+| **Shield Advanced** | Paid. Includes 24x7 DDoS response team (DRT), deeper insights, and **cost protection** during attacks. |
+
+▸ **Use case**: Shield Standard is sufficient for most; large enterprises may opt for **Advanced**.
+
+---
+
