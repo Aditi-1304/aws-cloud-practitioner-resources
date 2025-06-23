@@ -667,3 +667,82 @@ A **managed DDoS protection service** for AWS-hosted applications.
 
 ---
 
+### **41. AWS Network Firewall**
+
+A **managed network firewall** for **VPCs** to inspect and control traffic at the **network level**.
+
+#### ▸ Key Features:
+
+* Stateful firewall rules to allow/block **IP addresses, ports, protocols**.
+* Deep packet inspection (DPI).
+* Protects **VPCs** from common threats like **port scanning, malware, and exploits**.
+* Integrates with **VPC route tables** and **subnets**.
+
+▸ **Use Case**: Add **advanced traffic filtering** for VPCs in sensitive workloads (e.g., finance, healthcare).
+
+---
+
+### **42. AWS Firewall Manager**
+
+A **centralized security management service** for managing **firewall rules across multiple AWS accounts**.
+
+#### ▸ Manages:
+
+* **AWS WAF** (Web Application Firewall)
+* **Shield Advanced**
+* **VPC Network Firewall**
+* **Security Groups**
+
+▸ **Use Case**: Enterprises using **AWS Organizations** to apply consistent firewall/security policies across multiple accounts and regions.
+
+---
+
+### **43. Penetration Testing on AWS Cloud**
+
+AWS **allows penetration testing** (ethical hacking) on **certain approved services** without prior approval.
+
+#### ▸ Allowed Services (no approval needed):
+
+* EC2, RDS, CloudFront, Aurora, API Gateway, Lambda, etc.
+
+#### ▸ Rules:
+
+* Must **not impact other AWS customers**.
+* Must follow AWS's **[Penetration Testing Policy](https://aws.amazon.com/security/penetration-testing/)**.
+* Some types of tests (e.g., DDoS, port flooding) **are NOT allowed** without special permission.
+
+▸ **Use Case**: Customers wanting to **test their own cloud infrastructure’s security**.
+
+---
+
+### **44. AWS KMS (Key Management Service)**
+
+A **secure, managed encryption key service** for creating and controlling encryption keys.
+
+#### ▸ Key Features:
+
+* Generates **Customer Master Keys (CMKs)**.
+* Supports **encryption at rest** for services like S3, EBS, RDS, etc.
+* Integrates with **CloudTrail** for audit logging.
+* Keys can be **customer-managed** or **AWS-managed**.
+
+▸ **Use Case**: Encrypting sensitive data and controlling who can decrypt it using **IAM + KMS** permissions.
+
+---
+
+### **45. AWS CloudTrail**
+
+A **logging service** that records **all account-level activity** and API calls made in your AWS environment.
+
+#### ▸ Tracks:
+
+* **Who did what**, when, and from where.
+* Actions taken via **AWS Console, CLI, SDKs, and APIs**.
+* Stored in **S3** and can be analyzed in **CloudWatch or Athena**.
+
+▸ **Use Case**: **Security auditing**, **compliance**, **incident response**, and **troubleshooting**.
+
+---
+
+
+
