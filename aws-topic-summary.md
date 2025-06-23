@@ -57,4 +57,10 @@
 | 53.       | **S3 Transfer Acceleration**   | Speed up S3 uploads used to upload large files globally            |
 | 54.       | **Global Accelerator**         | Boost global app performance used to low-latency access to dynamic apps     |
 | 55.       | **Outposts**                   | AWS services on-premises used to run AWS locally with cloud integration |
+| 56.       | **Wavelength**                 | AWS at the edge of 5G networks used for ultra-low-latency mobile apps             |
+| 57.       | **Local Zones**                | Run AWS closer to users in major cities used for low latency in metros                     |
+| 58.       | **Shared Responsibility Model** | Defines security roles used for AWS secures infra; you secure data/config |
+| 59.       | **DDoS Protection**            | Infra absorbs attack traffic used to protect your apps’ availability          |
+| 60.       | **AWS Shield**                 | DDoS protection service used for auto-protection + paid advanced option    |
+
 
