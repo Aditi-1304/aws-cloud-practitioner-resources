@@ -816,3 +816,72 @@ Automatically **scans AWS workloads** for **vulnerabilities** and **security iss
 
 ---
 
+### **51. AWS Config**
+
+Tracks **configuration changes** in your AWS resources and ensures they **comply with rules** you define.
+
+#### ▸ What it does:
+
+* Continuously **monitors and records** resource configuration changes.
+* Shows how a resource **was configured at any point in time**.
+* Checks **compliance** (e.g., S3 buckets must be private).
+
+▸ **Use Case**: **Audit trail + compliance checking** for your infrastructure.
+
+---
+
+### **52. Amazon Macie**
+
+A **data security and privacy service** that uses **ML** to discover and protect **sensitive data** in **S3**.
+
+#### ▸ What it does:
+
+* Automatically finds **PII** (names, addresses, credit card info, etc.).
+* Flags **unprotected or publicly exposed** data.
+* Provides dashboards for **data classification**.
+
+▸ **Use Case**: **Protect personal and sensitive data** stored in S3.
+
+---
+
+### **53. AWS Security Hub**
+
+A **centralized dashboard** for managing and prioritizing **security alerts** from various AWS services.
+
+#### ▸ Integrates with:
+
+* **GuardDuty, Macie, Inspector, Firewall Manager**, and third-party tools.
+* Aggregates findings and **ranks by severity**.
+* Helps meet compliance frameworks like **CIS AWS Foundations**.
+
+▸ **Use Case**: One place to **view, analyze, and act on security alerts**.
+
+---
+
+### **54. Amazon Detective**
+
+Helps **investigate and analyze suspicious activity** in your AWS accounts using data from **CloudTrail, GuardDuty, and VPC Flow Logs**.
+
+#### ▸ What it does:
+
+* Automatically collects and links events.
+* Builds **visual timelines and graphs** to show what happened.
+* Useful during **security incident investigations**.
+
+▸ **Use Case**: Dig deeper into “what happened” after a **security alert** is triggered.
+
+---
+
+### **55. AWS Abuse**
+
+A **reporting system** for notifying AWS if **someone is using AWS resources maliciously**.
+
+#### ▸ Used when:
+
+* You see spam, phishing, port scanning, DDoS originating from AWS IPs.
+* **Not for reporting issues with your own AWS account**.
+* Report via: [aws.amazon.com/forms/report-abuse](https://aws.amazon.com/forms/report-abuse)
+
+▸ **Use Case**: **Report misuse** of AWS resources by others (e.g., suspicious traffic from EC2 instance not owned by you).
+
+---
