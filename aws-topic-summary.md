@@ -72,5 +72,10 @@
 | 68.       | **Artifact**                   | Access AWS compliance docs used to verify AWS certifications (SOC, PCI, etc.) |
 | 69.       | **GuardDuty**                  | Detects AWS threats automatically used for unusual logins, compromised accounts       |
 | 70.       | **Inspector**                  | Scans for vulnerabilities used to secure EC2, Lambda, and containers         |
+| 71.       | **AWS Config**                 | Tracks resource configuration and compliance     |
+| 72.       | **Amazon Macie**               | Detects sensitive data like PII in S3 buckets    |
+| 73.       | **Security Hub**               | Centralized security alert and compliance view   |
+| 74.       | **Amazon Detective**           | Investigates and visualizes suspicious activity  |
+| 75.       | **AWS Abuse**                  | Reports AWS resource misuse (spam, hacking etc.) |
 
 
