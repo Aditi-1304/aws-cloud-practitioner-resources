@@ -62,9 +62,15 @@
 | 58.       | **Shared Responsibility Model** | Defines security roles used for AWS secures infra; you secure data/config |
 | 59.       | **DDoS Protection**            | Infra absorbs attack traffic used to protect your apps’ availability          |
 | 60.       | **AWS Shield**                 | DDoS protection service used for auto-protection + paid advanced option    |
-| 61.       | **Network Firewall**    | Deep VPC-level traffic inspection used for advanced control over subnet traffic   |
-| 62.       | **Firewall Manager**    | Central firewall policy manager used to apply security rules across accounts   |
-| 63.       | **Penetration Testing** | Ethical hacking (allowed on some services) used to test your own AWS setup for weaknesses |
-| 64.       | **AWS KMS**             | Manage encryption keys used to encrypt S3, EBS, RDS, Lambda securely  |
-| 65.       | **CloudTrail**          | Logs all AWS account activity used to audit, security monitoring, compliance |
+| 61.       | **Network Firewall**           | Deep VPC-level traffic inspection used for advanced control over subnet traffic   |
+| 62.       | **Firewall Manager**           | Central firewall policy manager used to apply security rules across accounts   |
+| 63.       | **Penetration Testing**        | Ethical hacking (allowed on some services) used to test your own AWS setup for weaknesses |
+| 64.       | **AWS KMS**                    | Manage encryption keys used to encrypt S3, EBS, RDS, Lambda securely  |
+| 65.       | **CloudTrail**                 | Logs all AWS account activity used to audit, security monitoring, compliance |
+| 66.       | **Certificate Manager**        | Manage SSL/TLS certs used to secure apps/websites with HTTPS            |
+| 67.       | **Secrets Manager**            | Store & rotate credentials used to secure access to DBs/APIs                  |
+| 68.       | **Artifact**                   | Access AWS compliance docs used to verify AWS certifications (SOC, PCI, etc.) |
+| 69.       | **GuardDuty**                  | Detects AWS threats automatically used for unusual logins, compromised accounts       |
+| 70.       | **Inspector**                  | Scans for vulnerabilities used to secure EC2, Lambda, and containers         |
+
 
