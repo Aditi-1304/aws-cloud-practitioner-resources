@@ -744,5 +744,75 @@ A **logging service** that records **all account-level activity** and API calls 
 
 ---
 
+### **46. AWS Certificate Manager (ACM)**
 
+Manages **SSL/TLS certificates** to enable secure HTTPS connections to your websites or applications.
+
+#### ▸ Key Features:
+
+* **Provision, manage, and renew** certificates automatically.
+* Use with services like **Elastic Load Balancer, CloudFront, API Gateway**.
+* No manual steps for validation or renewal (for ACM-provided certs).
+
+▸ **Use Case**: Secure websites or APIs with **free, auto-renewing SSL certificates**.
+
+---
+
+### **47. AWS Secrets Manager**
+
+A **secure store** for managing **secrets** like API keys, database credentials, and tokens.
+
+#### ▸ Key Features:
+
+* Automatically **rotates secrets** (e.g., DB passwords).
+* **Encrypts secrets** using AWS KMS.
+* Fine-grained access control via **IAM**.
+* Logs secret access with **CloudTrail**.
+
+▸ **Use Case**: Securely store and rotate app credentials or tokens.
+
+---
+
+### **48. AWS Artifact**
+
+Provides **on-demand access to AWS compliance reports** and **agreements**.
+
+#### ▸ Includes:
+
+* SOC 1, SOC 2, PCI, ISO, GDPR compliance docs.
+* **NDA-based access** to AWS audit documentation.
+* Reports are downloadable and updated regularly.
+
+▸ **Use Case**: Organizations needing to **verify AWS compliance** for legal/regulatory needs.
+
+---
+
+### **49. Amazon GuardDuty**
+
+An **intelligent threat detection** service that monitors AWS accounts for **malicious activity**.
+
+#### ▸ Detects:
+
+* Unusual login attempts.
+* Compromised IAM users or EC2 instances.
+* Reconnaissance (e.g., port scanning).
+* Uses **machine learning** and **threat intel feeds**.
+
+▸ **Use Case**: Automatically monitor for **suspicious behavior** without installing anything.
+
+---
+
+### **50. Amazon Inspector**
+
+Automatically **scans AWS workloads** for **vulnerabilities** and **security issues**.
+
+#### ▸ Scans:
+
+* EC2 instances for **CVEs (Common Vulnerabilities and Exposures)**.
+* Lambda functions for **code flaws**.
+* **ECR (container images)** for known risks.
+
+▸ **Use Case**: Continuous **security assessment** of EC2, Lambda, and containers.
+
+---
 
