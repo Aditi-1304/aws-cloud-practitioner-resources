@@ -101,7 +101,12 @@
 | 97.       | **Pricing Calculator**         | Helps estimate AWS service costs for budgeting and planning          |
 | 98.       | **Trusted Advisor**            | Recommends best practices for cost, security, and performance        |
 | 99.       | **Cost Explorer**              | Provides visual insights into usage and cost trends for optimization |
-
+| 100.      | **Cost**                       | Ranges from Free to \~\$15k/month based on support tier               |
+| 101.      | **24/7 Support**               | Available only in Business and above                                  |
+| 102.      | **TAM (Technical Manager)**    | Provided fully in Enterprise, partial in Enterprise On-Ramp           |
+| 103.      | **Trusted Advisor – Full**     | Full checks available in Business and higher tiers                    |
+| 104.      | **Support API**                | Accessible in Business, Enterprise On-Ramp, and Enterprise tiers      |
+| 105.      | **Response Time – Prod Down**  | Fastest in Enterprise (<15 min), slower or unavailable in lower tiers |
 
 
 
