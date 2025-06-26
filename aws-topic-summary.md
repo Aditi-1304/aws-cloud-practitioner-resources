@@ -107,6 +107,10 @@
 | 103.      | **Trusted Advisor – Full**     | Full checks available in Business and higher tiers                    |
 | 104.      | **Support API**                | Accessible in Business, Enterprise On-Ramp, and Enterprise tiers      |
 | 105.      | **Response Time – Prod Down**  | Fastest in Enterprise (<15 min), slower or unavailable in lower tiers |
-
-
+| 106.      | **Docker**                     | Open-source platform to build and run portable containerized apps |
+| 107.      | **EKS**                        | Managed Kubernetes service for running scalable microservices     |
+| 108.      | **ECS**                        | AWS-native container orchestration for simple container workloads |
+| 109.      | **ECR**                        | Secure repository for storing and managing container images       |
+| 110.      | **API Gateway**                | Fully managed service to create, publish, and manage APIs         |
+| 111.      | **AWS Batch**                  | Enables efficient batch job execution at any scale                |
 
