@@ -963,3 +963,70 @@ A **distributed tracing tool** for debugging and analyzing **microservices and s
 
 ---
 
+###  **61. Amazon CodeGuru**
+
+An **AI-powered tool** for **code reviews** and **application performance profiling**.
+
+#### ▸ Two Main Features:
+
+* **CodeGuru Reviewer**: Analyzes Java/Python code for **bugs, inefficiencies, and security issues**.
+* **CodeGuru Profiler**: Finds **performance bottlenecks** in live apps.
+
+▸ **Use Case**: Help developers **write better, more efficient, and secure code** using AI recommendations.
+
+---
+
+### **62. AWS Health Dashboard**
+
+Provides **real-time and personalized alerts** about **AWS service health** and **account-specific issues**.
+
+#### ▸ Types of Notifications:
+
+* Service outages or disruptions.
+* Planned maintenance.
+* Issues **specifically affecting your AWS resources**.
+
+▸ **Use Case**: **Stay informed** about ongoing or upcoming events that affect **your AWS infrastructure**.
+
+---
+
+### **63. Cloud Integration** (General Concept)
+
+This isn’t a specific AWS service but refers to **how AWS enables different services to communicate seamlessly**, often using:
+
+* **Amazon EventBridge** (event bus)
+* **Amazon SQS** (message queue)
+* **Amazon SNS** (notifications)
+* **API Gateway** (connect APIs)
+* **Step Functions** (workflow orchestration)
+
+▸ **Use Case**: Build **loosely coupled, scalable cloud applications** that communicate reliably.
+
+---
+
+### **64. Amazon SQS (Simple Queue Service)**
+
+A **message queuing service** that allows **decoupling** of components in a cloud application.
+
+#### ▸ Types:
+
+* **Standard Queue** (default): High throughput, at-least-once delivery.
+* **FIFO Queue**: Ensures messages are processed **once** and **in order**.
+
+▸ **Use Case**: Enable **asynchronous communication** between microservices or serverless components (e.g., Lambda).
+
+---
+
+### **65. Amazon Kinesis**
+
+A **real-time data streaming service** for collecting, processing, and analyzing data.
+
+### ▸ Components:
+
+* **Kinesis Data Streams**: Custom real-time stream processing.
+* **Kinesis Data Firehose**: Load real-time data into S3, Redshift, etc.
+* **Kinesis Analytics**: Run SQL on streaming data.
+
+▸ **Use Case**: **Monitor clickstreams, IoT telemetry, or logs** in real-time and take action quickly.
+
+---
