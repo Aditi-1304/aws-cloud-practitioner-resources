@@ -1409,5 +1409,83 @@ A **fully managed service for running batch computing workloads** on AWS.
 
 ---
 
+### **91. Databases on AWS**
+
+AWS offers **fully managed** and **self-managed** database options for both **SQL (relational)** and **NoSQL (non-relational)** use cases.
+
+#### ▸ Key Points:
+
+* Managed services: **RDS, DynamoDB, Aurora**
+* Self-managed: You install/manage databases on **EC2**
+* Scalable, durable, with backups and high availability
+
+▸ **Use Case**: Store and manage application data, user data, transactions, logs, etc.
+
+---
+
+### **92. NoSQL Databases**
+
+NoSQL databases are designed for **unstructured, semi-structured**, or **rapidly changing** data, and they scale **horizontally**.
+
+#### ▸ AWS Example:
+
+* **Amazon DynamoDB** (fully managed NoSQL key-value store)
+
+  * Microsecond latency
+  * Serverless
+  * Auto-scaling
+  * Built-in security and backup
+
+▸ **Use Case**: Real-time gaming, IoT, mobile apps, user sessions.
+
+---
+
+### **93. Amazon RDS (Relational Database Service)**
+
+Fully managed **relational database service** for common engines:
+
+> MySQL, PostgreSQL, MariaDB, Oracle, SQL Server, and Amazon Aurora
+
+#### ▸ Key Features:
+
+* Automated **backups**, **patching**, **failover**, **monitoring**
+* **Multi-AZ deployment** for high availability
+* **Read Replicas** for scalability
+* **Encryption at rest & in transit**
+
+▸ **Use Case**: Traditional applications needing ACID-compliant relational databases.
+
+---
+
+### **94. Amazon Aurora**
+
+A **MySQL/PostgreSQL-compatible** RDS engine built by AWS — offers **performance & availability at 1/10th the cost** of enterprise DBs.
+
+#### ▸ Key Features:
+
+* 5x faster than MySQL, 3x faster than PostgreSQL
+* **Auto-scaling storage**
+* Up to **15 read replicas**
+* Fault-tolerant and self-healing
+
+▸ **Use Case**: Modern high-throughput apps needing **enterprise-grade relational DB** performance with full compatibility.
+
+---
+
+### **95. Read Replica (in RDS & Aurora)**
+
+Creates **read-only copies** of a database to offload **read traffic** and improve scalability.
+
+#### ▸ Key Points:
+
+* Not used for **failover** (except in Aurora)
+* Can create multiple replicas in same or different regions
+* Replication is **asynchronous**
+
+▸ **Use Case**: **High-traffic applications** with more reads than writes (e.g., analytics dashboards, reporting tools).
+
+---
+
+
 
 
