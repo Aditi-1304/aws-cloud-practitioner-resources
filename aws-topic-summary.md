@@ -118,8 +118,11 @@
 | 114.      | **RDS**                        | Managed SQL database for traditional relational workloads           |
 | 115.      | **Aurora**                     | High-performance, scalable SQL engine compatible with RDS           |
 | 116.      | **Read Replica**               | Read-only copy of a database to distribute and optimize read loads  |
-
-
+| 117.      | **RDS Multi-Region**           | Cross-region read replicas for disaster recovery and global access |
+| 118.      | **ElastiCache**                | In-memory caching layer to speed up RDS/DynamoDB queries           |
+| 119.      | **DynamoDB**                   | Fully managed, serverless NoSQL key-value database                 |
+| 120.      | **DAX**                        | DynamoDB Accelerator for ultra-fast read performance               |
+| 121.      | **Global Tables**              | Enables multi-region, multi-active replication for DynamoDB        |
 
 
 
