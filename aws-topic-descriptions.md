@@ -1030,3 +1030,74 @@ A **real-time data streaming service** for collecting, processing, and analyzing
 ▸ **Use Case**: **Monitor clickstreams, IoT telemetry, or logs** in real-time and take action quickly.
 
 ---
+
+### **66. Amazon SNS (Simple Notification Service)**
+
+A **fully managed pub/sub messaging service** for sending notifications or alerts to subscribers.
+
+#### ▸ Features:
+
+* Supports multiple **protocols**: email, SMS, Lambda, HTTP, etc.
+* **Topic-based messaging**: Publishers send messages to a topic, and all subscribers receive it.
+* Used for **real-time push notifications**.
+
+▸ **Use Case**: **Send alerts** (e.g., CloudWatch alarm to Ops team via email/SMS).
+
+---
+
+### **67. Amazon MQ**
+
+A **managed message broker** service for applications that use **traditional messaging protocols** like **AMQP, MQTT, STOMP, OpenWire**.
+
+#### ▸ Key Point:
+
+* Supports **ActiveMQ** and **RabbitMQ** engines.
+* Useful when **migrating legacy apps** that can’t use modern services like SQS or SNS.
+
+▸ **Use Case**: Migrate enterprise apps that use **standard messaging protocols**.
+
+---
+
+### **68. AWS CloudTrail**
+
+Records **API calls** and **user activity** across your AWS account for **audit and compliance**.
+
+#### ▸ Tracks:
+
+* Who did what, when, and from where (console, SDK, CLI).
+* Supports **multi-region** and **organization-wide trails**.
+* Integrates with **S3 (storage)** and **CloudWatch (monitoring)**.
+
+▸ **Use Case**: **Track changes, troubleshoot issues**, or **prove compliance**.
+
+---
+
+### **69. AWS Organizations**
+
+Used to **centrally manage and govern multiple AWS accounts**.
+
+#### ▸ Key Features:
+
+* Create **Organizational Units (OUs)**: Group accounts by team or purpose.
+* Apply **Service Control Policies (SCPs)**: Restrict what services/accounts can do.
+* **Consolidated Billing**: One bill for all accounts, plus shared volume discounts.
+
+▸ **Use Case**: Manage **large-scale AWS usage** across departments or environments.
+
+---
+
+### **70. Multi-Account Strategies**
+
+Refers to **best practices** in setting up **multiple AWS accounts** for security, cost control, and organization.
+
+#### ▸ Strategy Examples:
+
+* Use **separate accounts** for **dev, test, prod**.
+* Apply **least privilege** via SCPs.
+* Use **AWS Organizations** for structure, governance, and billing.
+
+▸ **Use Case**: Isolate workloads, improve **security, billing visibility, and fault isolation**.
+
+---
+
+
