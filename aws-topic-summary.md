@@ -82,6 +82,12 @@
 | 78.       | **CloudWatch Logs**            | Collects application and AWS service logs           |
 | 79.       | **EventBridge**                | Automates workflows triggered by AWS service events |
 | 80.       | **AWS X-Ray**                  | Traces distributed apps to diagnose latency issues  |
+| 81.       | **CodeGuru**                   | AI-based tool for code reviews and application profiling  |
+| 82.       | **Health Dashboard**           | Provides real-time alerts on AWS service health           |
+| 83.       | **Cloud Integration**          | Enables communication between AWS services                |
+| 84.       | **Amazon SQS**                 | Manages asynchronous message queues for decoupled systems |
+| 85.       | **Amazon Kinesis**             | Streams real-time data for analytics and processing       |
+
 
 
 
