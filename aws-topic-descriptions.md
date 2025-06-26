@@ -1321,5 +1321,93 @@ An **interactive tool** to **visualize, analyze, and forecast** AWS usage and sp
 
 ---
 
+### **85. Docker**
+
+A **platform** used to **build, package, and run applications in containers**.
+
+#### ▸ Components:
+
+* **Docker Containers**: Lightweight, portable, isolated environments to run apps.
+* **Docker Hub**: Public repository to store and share container images.
+
+▸ **Use Case**: Package an app and its dependencies into a **single container** for portability and consistency.
+
+>  *Docker is not AWS-specific*, but AWS services like ECS, EKS, and Fargate support Docker-based containers.
+
+---
+
+### **86. Amazon EKS (Elastic Kubernetes Service)**
+
+A **managed Kubernetes** service that makes it easy to run Kubernetes clusters on AWS.
+
+#### ▸ Key Benefits:
+
+* AWS **manages the Kubernetes control plane** (secure, scalable).
+* Integrates with **IAM, VPC, ALB, CloudWatch**.
+* You deploy your Docker containers using **Kubernetes YAML files**.
+
+▸ **Use Case**: Run **containerized microservices** using Kubernetes.
+
+---
+
+### **87. Amazon ECS (Elastic Container Service)**
+
+A **fully managed container orchestration** service built by AWS.
+
+#### ▸ Key Features:
+
+* Run and scale **Docker containers**.
+* **Launch types**:
+
+  * **Fargate**: Serverless (no EC2 needed)
+  * **EC2**: You manage the infrastructure
+* Simple to use compared to EKS (no Kubernetes knowledge needed)
+
+▸ **Use Case**: Deploy and manage containers **without Kubernetes complexity**.
+
+---
+
+### **88. Amazon ECR (Elastic Container Registry)**
+
+A **fully managed Docker container registry** for storing and versioning container images.
+
+#### ▸ Key Features:
+
+* Works with **ECS, EKS, Fargate**.
+* Private registry (unlike Docker Hub).
+* Supports **image scanning** for security.
+
+▸ **Use Case**: Store **container images** securely for use in ECS/EKS deployments.
+
+---
+
+### **89. Amazon API Gateway**
+
+A **fully managed service** to create, publish, secure, and monitor **APIs at any scale**.
+
+#### ▸ Key Features:
+
+* Supports **REST, HTTP, and WebSocket APIs**
+* Integrates with **Lambda**, **EC2**, **ECS**, **backend services**
+* **Built-in throttling, authorization (IAM/Cognito), caching**
+
+▸ **Use Case**: Build secure, scalable **APIs** for your application backend.
+
+---
+
+### **90. AWS Batch**
+
+A **fully managed service for running batch computing workloads** on AWS.
+
+#### ▸ Key Features:
+
+* Dynamically provisions **compute resources**.
+* Runs jobs on **EC2 or Fargate**, including Docker containers.
+* Ideal for **scientific modeling, simulations, data transformation**.
+
+▸ **Use Case**: Process large volumes of **batch jobs** like rendering or big data processing.
+
+---
+
 
 
