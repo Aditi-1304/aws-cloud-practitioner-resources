@@ -1100,4 +1100,83 @@ Refers to **best practices** in setting up **multiple AWS accounts** for securit
 
 ---
 
+### **71. Service Control Policies (SCPs)**
 
+A **feature of AWS Organizations** used to define **guardrails** for what **accounts and OUs** can and cannot do.
+
+#### ▸ Key Points:
+
+* SCPs don’t grant permissions; they **limit maximum permissions** available.
+* Applied to **organizational units (OUs)** or individual accounts.
+* Common use: **Prevent deleting critical resources**, or **deny regions or services**.
+
+▸ **Use Case**: **Restrict services/actions across multiple accounts**.
+
+---
+
+### **72. AWS Control Tower**
+
+A **setup-and-go** solution for quickly deploying a **secure multi-account AWS environment** using **best practices**.
+
+#### ▸ What It Provides:
+
+* Automated setup of **landing zones** (preconfigured accounts + OUs).
+* Includes: AWS Organizations, SCPs, Config, CloudTrail, and Guardrails.
+* Simplifies governance for **multi-account environments**.
+
+▸ **Use Case**: Set up a **pre-configured, secure AWS environment** with governance built-in.
+
+---
+
+### **73. **AWS Resource Access Manager (RAM)**
+
+Lets you **share AWS resources across accounts** without copying them.
+
+#### ▸ Shareable resources:
+
+* VPC subnets
+* Transit Gateways
+* Route53 Resolver Rules
+* License Manager configurations, etc.
+
+▸ **Use Case**: Allow **multiple AWS accounts to use shared resources** (e.g., shared VPC).
+
+---
+
+### **74. AWS Service Catalog**
+
+Allows organizations to **create and manage approved catalogs** of AWS resources (products).
+
+#### ▸ What it does:
+
+* Admins define **pre-approved templates** (CloudFormation stacks).
+* Users (e.g., developers) can **launch resources without needing full access**.
+* Helps maintain **compliance, security, and standardization**.
+
+▸ **Use Case**: Enable self-service provisioning of **standardized infrastructure**.
+
+---
+
+### **75. AWS Pricing Models**
+
+Understanding AWS pricing is **key for the exam**. Major pricing models include:
+
+#### ▸ Compute (EC2, Lambda):
+
+* **On-Demand**: Pay per second/minute. No commitment.
+* **Reserved Instances**: Up to 75% discount for 1–3 year commitment.
+* **Spot Instances**: Up to 90% discount. Can be interrupted.
+* **Savings Plans**: Flexible discount model across instance families.
+
+#### ▸ Storage (S3, EBS, Glacier):
+
+* Charged by **GB stored**, **requests**, and **data transfer**.
+
+#### ▸ Free Tier:
+
+* Always Free: e.g., 25 GB DynamoDB, 1 million Lambda requests.
+* 12-Month Free: e.g., 750 hours EC2 t2.micro.
+
+▸ **Use Case**: Choose the right pricing model to **optimize cost** based on workload patterns.
+
+---
