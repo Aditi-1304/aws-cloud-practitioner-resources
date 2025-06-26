@@ -92,6 +92,9 @@
 | 88.       | **CloudTrail**                 | Logs all API calls and user activity for auditing and compliance      |
 | 89.       | **AWS Organizations**          | Centralized management of multiple AWS accounts                       |
 | 90.       | **Multi-Account Strategy**     | Best practices for account segmentation to enhance control & tracking |
-
-
+| 91.       | **SCPs**                       | Set permission guardrails for AWS Organizations to restrict actions      |
+| 92.       | **Control Tower**              | Automates secure and compliant multi-account AWS environment setup       |
+| 93.       | **AWS RAM**                    | Enables sharing of AWS resources (like VPCs, TGWs) across accounts       |
+| 94.       | **Service Catalog**            | Provides standardized templates for approved resource provisioning       |
+| 95.       | **Pricing Models**             | Offers cost options like On-Demand, Reserved, and Spot to optimize spend |
 
