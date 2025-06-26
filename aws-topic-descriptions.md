@@ -1243,7 +1243,83 @@ An **interactive tool** to **visualize, analyze, and forecast** AWS usage and sp
 
 ---
 
+### **80. AWS Basic Support Plan** (Free)
 
+#### ▸ Included by default:
+
+* **24/7 access** to:
+
+  * **AWS documentation**
+  * **Whitepapers**
+  * **AWS Trusted Advisor – 7 core checks**
+  * **AWS Health Dashboard**
+
+▸ **Use Case**: For **individuals and small teams** not needing direct support.
+
+---
+
+### **81. AWS Developer Support Plan** (\~\$29/month or 3% usage)
+
+#### ▸ Features:
+
+* **Business-hours email access** to Cloud Support Associates (unlimited cases).
+* Response time:
+
+  * **< 12 hrs** for general guidance
+  * **< 24 hrs** for system impaired
+* Access to best practices, SDKs, and forums.
+
+▸ **Use Case**: For **development and testing** in non-production environments.
+
+---
+
+### ▸ 82. **AWS Business Support Plan** (\~\$100/month or 10%/7%/5% tiered pricing)
+
+#### ▸ Features:
+
+* 24/7 **phone, chat, and email support**
+* Response time:
+
+  * **< 1 hr** for production system down
+  * **< 12 hrs** for production impaired
+* Access to **full Trusted Advisor checks**
+* Access to AWS **Support API**
+
+▸ **Use Case**: For **production workloads** needing **faster support and guidance**.
+
+---
+
+### **83. AWS Enterprise On-Ramp Support Plan** (\~\$5,500/month+)
+
+#### ▸ Features:
+
+* Designed for **mid-sized or fast-growing businesses**.
+* Includes everything in Business plan plus:
+
+  * Access to **Technical Account Manager (TAM)**
+  * **Monthly technical reviews**
+  * **Proactive case management**
+* Priority case handling and faster escalation.
+
+▸ **Use Case**: For companies beginning to scale and needing **hands-on guidance**.
+
+---
+
+### **84. AWS Enterprise Support Plan** (starts at \~\$15,000/month+)
+
+#### ▸ Features:
+
+* Everything from On-Ramp plus:
+
+  * **Designated Technical Account Manager (TAM)**
+  * **24/7 white-glove support**
+  * **Well-Architected Reviews**
+  * Access to **Infrastructure Event Management (IEM)** for large launches
+  * Concierge billing & account support
+
+▸ **Use Case**: **Large-scale enterprises** with mission-critical apps on AWS needing **highest level of support**.
+
+---
 
 
 
