@@ -113,4 +113,13 @@
 | 109.      | **ECR**                        | Secure repository for storing and managing container images       |
 | 110.      | **API Gateway**                | Fully managed service to create, publish, and manage APIs         |
 | 111.      | **AWS Batch**                  | Enables efficient batch job execution at any scale                |
+| 112.      | **Databases**                  | Used to store structured or unstructured data for applications      |
+| 113.      | **NoSQL**                      | Non-relational DB for flexible, real-time, schema-less applications |
+| 114.      | **RDS**                        | Managed SQL database for traditional relational workloads           |
+| 115.      | **Aurora**                     | High-performance, scalable SQL engine compatible with RDS           |
+| 116.      | **Read Replica**               | Read-only copy of a database to distribute and optimize read loads  |
+
+
+
+
 
