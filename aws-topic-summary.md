@@ -87,7 +87,11 @@
 | 83.       | **Cloud Integration**          | Enables communication between AWS services                |
 | 84.       | **Amazon SQS**                 | Manages asynchronous message queues for decoupled systems |
 | 85.       | **Amazon Kinesis**             | Streams real-time data for analytics and processing       |
-
+| 86.       | **Amazon SNS**                 | Publishes messages for alerts via email, SMS, etc. (pub/sub model)    |
+| 87.       | **Amazon MQ**                  | Managed message broker for legacy app migration                       |
+| 88.       | **CloudTrail**                 | Logs all API calls and user activity for auditing and compliance      |
+| 89.       | **AWS Organizations**          | Centralized management of multiple AWS accounts                       |
+| 90.       | **Multi-Account Strategy**     | Best practices for account segmentation to enhance control & tracking |
 
 
 
