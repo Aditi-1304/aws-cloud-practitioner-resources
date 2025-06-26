@@ -1180,3 +1180,70 @@ Understanding AWS pricing is **key for the exam**. Major pricing models include:
 ▸ **Use Case**: Choose the right pricing model to **optimize cost** based on workload patterns.
 
 ---
+
+### **76. AWS Compute Optimizer**
+
+Uses **machine learning** to recommend optimal **compute resources** for your workload.
+
+#### ▸ Key Features:
+
+* Analyzes usage of **EC2, Lambda, EBS, and Auto Scaling groups**.
+* Suggests instance types and sizes to reduce **underutilization or over-provisioning**.
+* Recommendations based on **past 14 days** of usage.
+
+▸ **Use Case**: **Optimize cost and performance** by right-sizing resources.
+
+---
+
+### **77. AWS Pricing Calculator**
+
+A **free web-based tool** to **estimate costs** of AWS services before you use them.
+
+#### ▸ Key Features:
+
+* Supports pricing estimation for **EC2, S3, RDS, Lambda**, etc.
+* Allows you to **customize usage patterns, region, storage, duration**.
+* Output includes **detailed cost breakdowns** and **monthly estimates**.
+
+▸ **Use Case**: **Forecast AWS spend** for budgeting or pre-project approval.
+
+---
+
+### **78. AWS Trusted Advisor**
+
+A **management tool** that provides **real-time recommendations** for improving:
+
+* **Security**
+* **Cost optimization**
+* **Performance**
+* **Fault tolerance**
+* **Service limits**
+
+#### ▸ Tiers:
+
+* **Basic (free)**: 7 core checks.
+* **Full (Business/Enterprise support plan)**: All checks across 5 categories.
+
+▸ **Use Case**: Proactive **best practice checks** to improve your AWS environment.
+
+---
+
+### **79. AWS Cost Explorer**
+
+An **interactive tool** to **visualize, analyze, and forecast** AWS usage and spending.
+
+#### ▸ Key Features:
+
+* **Daily, monthly, or hourly spend breakdowns**
+* **Filtering by service, region, linked account**
+* Forecast **future usage** based on trends
+* Works well with **Budgets, Tags, and Consolidated Billing**
+
+▸ **Use Case**: **Track and control AWS costs**, especially in multi-account setups.
+
+---
+
+
+
+
+
