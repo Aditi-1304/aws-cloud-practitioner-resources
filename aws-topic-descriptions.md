@@ -885,3 +885,81 @@ A **reporting system** for notifying AWS if **someone is using AWS resources mal
 ▸ **Use Case**: **Report misuse** of AWS resources by others (e.g., suspicious traffic from EC2 instance not owned by you).
 
 ---
+
+### **56. IAM Access Analyzer**
+
+Helps you **identify resources in your AWS account that are accessible publicly or from other accounts**.
+
+#### ▸ What it does:
+
+* Analyzes **S3 buckets, IAM roles, KMS keys, Lambda functions**, etc.
+* Alerts you if a resource is **shared with external accounts or made public**.
+* Works **automatically** and shows findings in IAM or via AWS CLI.
+
+▸ **Use Case**: **Detect accidental public access** to sensitive AWS resources.
+
+---
+
+### **57. AWS CloudWatch Metrics**
+
+Part of **Amazon CloudWatch** — tracks **performance metrics** for AWS services and custom applications.
+
+#### ▸ Examples:
+
+* **EC2**: CPU utilization, disk I/O, network usage.
+* **RDS**: DB connections, read/write throughput.
+* **Custom metrics**: App-level stats like user counts or transaction speeds.
+
+▸ **Use Case**: **Monitor AWS services** and get alerts when usage crosses thresholds.
+
+---
+
+### **58. CloudWatch Logs**
+
+Lets you **collect, monitor, and store logs** from AWS services and your applications.
+
+#### ▸ Examples:
+
+* **Lambda function output logs**
+* **EC2 system logs**
+* **Application logs**
+
+#### ▸ Features:
+
+* Can set up **log-based alarms**
+* Integrates with **CloudWatch Insights** for log analysis
+
+▸ **Use Case**: **Store and analyze logs** for troubleshooting and audits.
+
+---
+
+### **59. Amazon EventBridge**
+
+*(Previously CloudWatch Events)*
+
+A **serverless event bus** that connects AWS services with your own apps, based on **events and rules**.
+
+#### ▸ Key Uses:
+
+* **Trigger Lambda functions** when new S3 objects are uploaded.
+* Send events from **SaaS apps (like Zendesk, Auth0)** to AWS.
+* **Automated workflows** based on AWS service events.
+
+▸ **Use Case**: **Event-driven automation** between services and apps.
+
+---
+
+### **60. AWS X-Ray**
+
+A **distributed tracing tool** for debugging and analyzing **microservices and serverless applications**.
+
+#### ▸ What it shows:
+
+* Latency across services (e.g., API Gateway → Lambda → DynamoDB)
+* Service maps with bottlenecks highlighted
+* Errors and performance traces
+
+▸ **Use Case**: **Troubleshoot slow or error-prone APIs** and pinpoint performance issues.
+
+---
+
