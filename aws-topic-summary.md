@@ -77,5 +77,11 @@
 | 73.       | **Security Hub**               | Centralized security alert and compliance view   |
 | 74.       | **Amazon Detective**           | Investigates and visualizes suspicious activity  |
 | 75.       | **AWS Abuse**                  | Reports AWS resource misuse (spam, hacking etc.) |
+| 76.       | **IAM Access Analyzer**        | Identifies publicly or externally shared resources  |
+| 77.       | **CloudWatch Metrics**         | Tracks performance stats like CPU, memory, DB usage |
+| 78.       | **CloudWatch Logs**            | Collects application and AWS service logs           |
+| 79.       | **EventBridge**                | Automates workflows triggered by AWS service events |
+| 80.       | **AWS X-Ray**                  | Traces distributed apps to diagnose latency issues  |
+
 
 
