@@ -1486,6 +1486,95 @@ Creates **read-only copies** of a database to offload **read traffic** and impro
 
 ---
 
+### **96. RDS Multi-Region Deployment**
+
+#### ▸ What it is:
+
+A setup where an RDS instance (usually **Read Replica**) is created in **another AWS region**.
+
+#### ▸ Key Features:
+
+* Provides **disaster recovery**, **data locality**, and **latency reduction**
+* Not automatic failover (unless you use **Aurora Global Database**)
+
+▸ **Use Case**: Mission-critical applications needing **geo-redundancy** or **faster global access** to relational DBs.
+
+---
+
+### **97. Amazon ElastiCache**
+
+#### ▸ What it is:
+
+A **fully managed in-memory cache** service for **speeding up data access**.
+
+#### ▸ Supported Engines:
+
+* **Redis**: Cache + pub/sub + streams + geospatial
+* **Memcached**: Simple in-memory key-value store
+
+#### ▸ Benefits:
+
+* **Microsecond latency**
+* Reduces load on primary DB (RDS or DynamoDB)
+
+▸ **Use Case**: Caching frequently accessed data (e.g., sessions, product catalogs, leaderboards).
+
+---
+
+### **98. Amazon DynamoDB**
+
+#### ▸ What it is:
+
+A **NoSQL key-value and document database** with:
+
+* **Serverless architecture**
+* **Millisecond latency at scale**
+* **Auto-scaling**, **on-demand mode**
+
+#### ▸ Core Features:
+
+* Point-in-time recovery
+* Encryption at rest
+* Backup & restore
+* Global Tables
+* Streams (change tracking)
+
+▸ **Use Case**: IoT, mobile apps, gaming, shopping carts, user data.
+
+---
+
+### **99. DAX (DynamoDB Accelerator)**
+
+#### ▸ What it is:
+
+An **in-memory caching layer** for DynamoDB that **reduces read latency** from milliseconds → **microseconds**.
+
+#### ▸ Key Features:
+
+* Fully managed
+* Write-through caching (DAX handles consistency)
+* No code change to existing DynamoDB calls (uses DAX SDK)
+
+▸ **Use Case**: **Read-heavy workloads** that need ultra-fast performance (e.g., recommendation engines).
+
+---
+
+### **100. DynamoDB Global Tables**
+
+#### ▸ What it is:
+
+A **multi-region, multi-active replication** setup for DynamoDB tables.
+
+#### ▸ Key Features:
+
+* **Active-active replication** (can write from multiple regions)
+* Automatically replicates data across specified regions
+* Ideal for high availability and low-latency access globally
+
+▸ **Use Case**: Global applications requiring **real-time, multi-region writes** (e.g., collaborative apps, gaming).
+
+---
+
 
 
 
