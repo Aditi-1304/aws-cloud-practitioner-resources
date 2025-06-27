@@ -1575,6 +1575,86 @@ A **multi-region, multi-active replication** setup for DynamoDB tables.
 
 ---
 
+### **101. Amazon Redshift**
+
+#### ▸ What It Is:
+
+A **fully managed data warehouse** service for **analytical querying (OLAP)** of petabyte-scale structured data.
+
+#### ▸ Key Features:
+
+* Uses **SQL-like queries**
+* Columnar storage + compression = **fast performance**
+* Integrates with **S3 (Spectrum), QuickSight, Glue**
+* Redshift Serverless: No infrastructure to manage
+
+▸ **Use Case**: Business Intelligence, dashboards, big data analytics.
+
+---
+
+### **102. Amazon EMR (Elastic MapReduce)**
+
+#### ▸ What It Is:
+
+A **big data platform** that runs open-source frameworks like **Apache Spark, Hadoop, Hive** on AWS.
+
+#### ▸ Key Features:
+
+* Run data processing jobs on **EC2 or Spot instances**
+* Auto-scaling and optimized pricing
+* Works with **S3, DynamoDB, Redshift**
+
+▸ **Use Case**: Large-scale **data transformation**, **ETL**, **log analysis**, **machine learning preprocessing**.
+
+---
+
+### **103. Amazon Athena**
+
+#### ▸ What It Is:
+
+A **serverless query service** to analyze data directly in **Amazon S3 using SQL**.
+
+#### ▸ Key Features:
+
+* No infrastructure to manage
+* Pay per query (based on data scanned)
+* Integrated with **QuickSight**, **Glue Data Catalog**
+
+▸ **Use Case**: Fast ad-hoc querying of S3-stored CSV, JSON, Parquet, etc., without loading into a database.
+
+---
+
+### **104. Amazon QuickSight**
+
+#### ▸ What It Is:
+
+A **business intelligence (BI) and data visualization** tool like Tableau or Power BI.
+
+#### ▸ Key Features:
+
+* Connects to **Redshift, Athena, S3, RDS**
+* Supports **ML-powered insights** (AutoNarratives)
+* Accessible via web browser or app
+
+▸ **Use Case**: Creating **dashboards, KPIs, and reports** for decision-making across business teams.
+
+---
+
+### **105. Amazon DocumentDB (with MongoDB compatibility)**
+
+#### ▸ What It Is:
+
+A **fully managed document database** designed to store, query, and index **JSON-like data** (MongoDB compatible).
+
+#### ▸ Key Features:
+
+* Scalable, highly available, secure
+* Used in apps that need flexible document structures
+* Built for **semi-structured** data
+
+▸ **Use Case**: Content management systems, catalogs, user profiles — anything needing a **document-style database**.
+
+---
 
 
 
