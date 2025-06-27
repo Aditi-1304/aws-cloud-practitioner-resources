@@ -123,6 +123,12 @@
 | 119.      | **DynamoDB**                   | Fully managed, serverless NoSQL key-value database                 |
 | 120.      | **DAX**                        | DynamoDB Accelerator for ultra-fast read performance               |
 | 121.      | **Global Tables**              | Enables multi-region, multi-active replication for DynamoDB        |
+| 122.      | **Redshift**                   | Data warehouse for OLAP workloads like big data analytics and BI        |
+| 123.      | **EMR**                        | Managed big data platform for ETL, ML, and Apache Spark jobs            |
+| 124.      | **Athena**                     | Run SQL queries directly on S3 data without provisioning infrastructure |
+| 125.      | **QuickSight**                 | BI tool to build dashboards and visual reports                          |
+| 126.      | **DocumentDB**                 | Managed NoSQL document database for JSON-based application workloads    |
+
 
 
 
