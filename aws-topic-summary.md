@@ -128,7 +128,11 @@
 | 124.      | **Athena**                     | Run SQL queries directly on S3 data without provisioning infrastructure |
 | 125.      | **QuickSight**                 | BI tool to build dashboards and visual reports                          |
 | 126.      | **DocumentDB**                 | Managed NoSQL document database for JSON-based application workloads    |
-
+| 127.      | **Neptune**                    | Graph database for use cases like social networks and fraud detection     |
+| 128.      | **Timestream**                 | Time-series database optimized for IoT and DevOps metric data             |
+| 129.      | **Managed Blockchain**         | Distributed ledger for trusted, multi-party transactions and traceability |
+| 130.      | **Glue**                       | Serverless ETL service for data preparation and cataloging                |
+| 131.      | **Amplify**                    | Platform to quickly build full-stack apps with a managed backend          |
 
 
 
