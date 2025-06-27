@@ -1656,5 +1656,92 @@ A **fully managed document database** designed to store, query, and index **JSON
 
 ---
 
+### **106. Amazon Neptune**
+
+#### ▸ What It Is:
+
+A **fully managed graph database** optimized for **connected data** and relationships.
+
+#### ▸ Supported Graph Models:
+
+* **Property Graph** (via Apache TinkerPop / Gremlin)
+* **RDF / SPARQL** (semantic web queries)
+
+#### ▸ Key Features:
+
+* Low-latency performance for traversing millions of relationships
+* Used for **social networks, recommendation engines, fraud detection**
+
+▸ **Use Case**: Apps that need fast, complex relationship queries like **"friends of friends"**, or **knowledge graphs**.
+
+---
+
+### **107. Amazon Timestream**
+
+#### ▸ What It Is:
+
+A **serverless time series database** for IoT and operational applications.
+
+#### ▸ Key Features:
+
+* Optimized for **time-stamped data** (e.g., metrics, logs)
+* Automatic storage tiering (recent = fast, old = cheap)
+* Built-in **data lifecycle management**
+
+▸ **Use Case**: **IoT sensor data**, **app performance metrics**, **log analytics**, **devops monitoring**.
+
+---
+
+### **108. Amazon Managed Blockchain**
+
+#### ▸ What It Is:
+
+A **fully managed service for creating and managing blockchain networks** using:
+
+* **Hyperledger Fabric**
+* **Ethereum (retired)**
+
+#### ▸ Key Features:
+
+* Decentralized ledger
+* Tamper-proof transactions
+* Access control for participants
+
+▸ **Use Case**: **Supply chain**, **healthcare records**, **finance consortia** requiring transparency and trust.
+
+---
+
+### **109. AWS Glue**
+
+#### ▸ What It Is:
+
+A **fully managed ETL (Extract, Transform, Load)** service used to prepare and move data between sources and destinations.
+
+#### ▸ Key Features:
+
+* **Serverless** data integration
+* Supports **PySpark** & **Python**
+* Has a **Data Catalog**
+* **Glue Studio**: No-code visual ETL builder
+
+▸ **Use Case**: Clean, transform, and load data into **data lakes (S3)** or **data warehouses (Redshift)**.
+
+---
+
+### **110. AWS Amplify**
+
+#### ▸ What It Is:
+
+A platform to **build, host, and manage full-stack web and mobile apps** using AWS services (like Cognito, API Gateway, S3, Lambda, DynamoDB).
+
+#### ▸ Key Features:
+
+* Easy integration with **React, Angular, Vue, Flutter**
+* Auto-deploy from GitHub/Bitbucket
+* Authentication, storage, API, hosting — all managed
+
+▸ **Use Case**: **Frontend/backend apps**, **JAMstack** apps, mobile backends.
+
+---
 
 
