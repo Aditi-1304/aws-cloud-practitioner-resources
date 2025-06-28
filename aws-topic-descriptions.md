@@ -1744,4 +1744,88 @@ A platform to **build, host, and manage full-stack web and mobile apps** using A
 
 ---
 
+### **111. AWS AppSync**
+
+#### ▸ What It Is:
+
+A **fully managed service for GraphQL APIs** that lets apps query data from multiple sources.
+
+#### ▸ Key Features:
+
+* Supports **GraphQL**, integrates with **Lambda, DynamoDB, RDS, OpenSearch**
+* Real-time data via **subscriptions**
+* Offline data sync for mobile apps
+
+▸ **Use Case**: Unified APIs for mobile/web apps that pull from different AWS data sources.
+
+---
+
+### **112. AWS OpsWorks**
+
+#### ▸ What It Is:
+
+A **configuration management** service that uses **Chef and Puppet** to automate server setup, deployment, and management.
+
+#### ▸ Key Features:
+
+* Automates infrastructure as code
+* Manages EC2 instances and on-prem servers
+* Can configure EBS, Auto Scaling, and ELBs
+
+▸ **Use Case**: Teams already using **Chef/Puppet** and need automated config management.
+
+---
+
+### **113. Amazon Cognito**
+
+#### ▸ What It Is:
+
+A service for **user authentication, authorization, and user management** in apps.
+
+###$ ▸ Key Features:
+
+* Sign-up, sign-in, password reset
+* Social logins (Google, Facebook, Apple)
+* Federated identity + SSO
+* Token-based auth (OAuth2, OpenID Connect)
+
+▸ **Use Case**: Web/mobile apps needing secure and scalable **user login systems** without building one from scratch.
+
+---
+
+### **114. AWS Cloud9**
+
+#### ▸ What It Is:
+
+A **browser-based IDE** for writing, running, and debugging code using just a browser.
+
+#### ▸ Key Features:
+
+* Pre-installed SDKs, CLI tools
+* Collaborate in real-time
+* Integrated terminal with AWS CLI
+* No setup required — runs on EC2 or Lambda
+
+▸ **Use Case**: Cloud-native development environment for **Python, Node.js, C++, etc.**, accessible from any device.
+
+---
+
+### **115. AWS CodeStar**
+
+#### ▸ What It Is:
+
+An **all-in-one development dashboard** that helps teams quickly start and manage full CI/CD projects.
+
+#### ▸ Key Features:
+
+* Templates for common app stacks (Node.js, Python, Java, etc.)
+* Auto-integrates with **CodeCommit, CodePipeline, CodeDeploy**
+* Centralized DevOps management
+
+▸ **Use Case**: Teams looking to quickly spin up an **end-to-end CI/CD pipeline** with monitoring.
+
+---
+
+
+
 
