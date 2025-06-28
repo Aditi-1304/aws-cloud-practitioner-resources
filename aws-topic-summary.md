@@ -133,6 +133,10 @@
 | 129.      | **Managed Blockchain**         | Distributed ledger for trusted, multi-party transactions and traceability |
 | 130.      | **Glue**                       | Serverless ETL service for data preparation and cataloging                |
 | 131.      | **Amplify**                    | Platform to quickly build full-stack apps with a managed backend          |
-
+| 132.      | **AppSync**                    | Managed GraphQL API service for mobile and web app backends       |
+| 133.      | **OpsWorks**                   | Configuration management using Chef or Puppet automation          |
+| 134.      | **Cognito**                    | Provides user authentication and authorization (OAuth, SSO, etc.) |
+| 135.      | **Cloud9**                     | Cloud-based IDE for coding directly in the browser                |
+| 136.      | **CodeStar**                   | Orchestrates CI/CD pipelines for rapid full-stack app development |
 
 
