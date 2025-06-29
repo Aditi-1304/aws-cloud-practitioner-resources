@@ -2,10 +2,10 @@
 
 ### **1. IAM User**
 
-* **IAM (Identity and Access Management)** is used to manage access to AWS services.
-* An **IAM user** is an identity created for a person or application.
-* Each user has **credentials (username/password or access keys)** and **permissions (via policies)**.
-* Best practice: **Use IAM users, not root**, and give **least privilege access**.
+- **IAM (Identity and Access Management)** is used to manage access to AWS services.
+- An **IAM user** is an identity created for a person or application.
+- Each user has **credentials (username/password or access keys)** and **permissions (via policies)**.
+- Best practice: **Use IAM users, not root**, and give **least privilege access**.
 
 ---
 
@@ -15,124 +15,126 @@ Object storage service for any type of data.
 
 #### ▸ **Versioning**
 
-* Stores **multiple versions** of an object.
-* Useful for **data recovery** or rollback.
-* Once enabled on a bucket, it **cannot be disabled**, only suspended.
+- Stores **multiple versions** of an object.
+- Useful for **data recovery** or rollback.
+- Once enabled on a bucket, it **cannot be disabled**, only suspended.
 
 #### ▸ **Replication**
 
-* Automatically copies objects across **buckets in same or different AWS Regions**.
-* Two types:
+- Automatically copies objects across **buckets in same or different AWS Regions**.
+- Two types:
 
-  * **SRR**: Same Region Replication
-  * **CRR**: Cross Region Replication (disaster recovery)
+  - **SRR**: Same Region Replication
+  - **CRR**: Cross Region Replication (disaster recovery)
 
 #### ▸ **Objects**
 
-* Basic unit of storage in S3.
-* Each object = data + metadata + unique key.
-* Stored in **buckets**.
+- Basic unit of storage in S3.
+- Each object = data + metadata + unique key.
+- Stored in **buckets**.
 
 #### ▸ **Policy Attach**
 
-* Attach **bucket policies** or **IAM policies** to control access.
-* Bucket policies are **resource-based**, while IAM policies are **identity-based**.
+- Attach **bucket policies** or **IAM policies** to control access.
+- Bucket policies are **resource-based**, while IAM policies are **identity-based**.
 
 #### ▸ **Static Website Hosting**
 
-* You can **host a static website** (HTML, CSS, JS) directly from an S3 bucket.
-* Requires enabling **public access**, specifying **index and error documents**.
+- You can **host a static website** (HTML, CSS, JS) directly from an S3 bucket.
+- Requires enabling **public access**, specifying **index and error documents**.
 
 #### ▸ **Cross Region Replication**
 
-* Automatically replicates objects from one AWS Region to another.
-* Must enable **versioning** on both source and destination buckets.
-* Useful for **high availability** and **disaster recovery**.
+- Automatically replicates objects from one AWS Region to another.
+- Must enable **versioning** on both source and destination buckets.
+- Useful for **high availability** and **disaster recovery**.
 
 #### ▸ **Event Configuration**
 
-* Configure S3 to trigger **events** (like object upload/delete) to services like:
+- Configure S3 to trigger **events** (like object upload/delete) to services like:
 
-  * **Lambda**
-  * **SNS**
-  * **SQS**
-* Enables **serverless workflows**, e.g., process files as they're uploaded.
+  - **Lambda**
+  - **SNS**
+  - **SQS**
+
+- Enables **serverless workflows**, e.g., process files as they're uploaded.
 
 ---
 
 ### **3. AWS Snowball**
 
-* **Physical device** for moving large volumes of data to/from AWS.
-* Use case: when data transfer over the internet is **too slow or expensive**.
-* Variants:
+- **Physical device** for moving large volumes of data to/from AWS.
+- Use case: when data transfer over the internet is **too slow or expensive**.
+- Variants:
 
-  * **Snowball Edge Storage Optimized**
-  * **Snowball Edge Compute Optimized**
-* Part of **AWS Snow Family** (includes Snowmobile and Snowcone).
+  - **Snowball Edge Storage Optimized**
+  - **Snowball Edge Compute Optimized**
+
+- Part of **AWS Snow Family** (includes Snowmobile and Snowcone).
 
 ---
 
 ### **4. AWS Lambda**
 
-* **Serverless compute**: Run code without provisioning servers.
-* Triggered by **events** (S3 upload, API Gateway, DynamoDB streams, etc.)
-* Pay only for **compute time** used (in milliseconds).
-* Supports many languages: Python, Node.js, Java, etc.
+- **Serverless compute**: Run code without provisioning servers.
+- Triggered by **events** (S3 upload, API Gateway, DynamoDB streams, etc.)
+- Pay only for **compute time** used (in milliseconds).
+- Supports many languages: Python, Node.js, Java, etc.
 
 ---
 
 ### **5. Amazon EC2 (Elastic Compute Cloud)**
 
-* Virtual servers in the cloud.
-* You choose instance type, OS, network, storage, etc.
+- Virtual servers in the cloud.
+- You choose instance type, OS, network, storage, etc.
 
 #### ▸ **Outbound & Inbound Rules**
 
-* Defined in **security groups**.
-* Inbound: controls **incoming traffic** (e.g., allow port 80 for HTTP).
-* Outbound: controls **outgoing traffic** from instance.
+- Defined in **security groups**.
+- Inbound: controls **incoming traffic** (e.g., allow port 80 for HTTP).
+- Outbound: controls **outgoing traffic** from instance.
 
 #### ▸ **Storage Types**
 
-* **EBS (Elastic Block Store)**: Persistent block storage. Remains after instance termination.
-* **EFS (Elastic File System)**: Shared file storage across instances.
-* **Instance Store**: Temporary storage attached to an instance. **Data lost when stopped**.
+- **EBS (Elastic Block Store)**: Persistent block storage. Remains after instance termination.
+- **EFS (Elastic File System)**: Shared file storage across instances.
+- **Instance Store**: Temporary storage attached to an instance. **Data lost when stopped**.
 
 #### ▸ **Snapshots**
 
-* **Backups** of EBS volumes.
-* Stored in **Amazon S3** (but not accessible as objects).
-* Used to **create new volumes or AMIs**.
+- **Backups** of EBS volumes.
+- Stored in **Amazon S3** (but not accessible as objects).
+- Used to **create new volumes or AMIs**.
 
 #### ▸ **Security Group**
 
-* Acts as a **virtual firewall** for your EC2 instances.
-* Controls **traffic rules** (inbound & outbound).
-* **Stateful**: return traffic is automatically allowed.
+- Acts as a **virtual firewall** for your EC2 instances.
+- Controls **traffic rules** (inbound & outbound).
+- **Stateful**: return traffic is automatically allowed.
 
 #### ▸ **Instance Pricing**
 
-* **On-Demand**: Pay per hour/second.
-* **Reserved**: 1- or 3-year commitment for significant discount.
-* **Spot**: Bid for unused capacity at discount.
-* **Savings Plans**: Flexible pricing model for long-term use.
+- **On-Demand**: Pay per hour/second.
+- **Reserved**: 1- or 3-year commitment for significant discount.
+- **Spot**: Bid for unused capacity at discount.
+- **Savings Plans**: Flexible pricing model for long-term use.
 
 #### ▸ **Web Server**
 
-* EC2 can be used to host web servers like **Apache**, **Nginx**.
-* Often used with **Elastic IP**, **Auto Scaling**, and **Load Balancer**.
+- EC2 can be used to host web servers like **Apache**, **Nginx**.
+- Often used with **Elastic IP**, **Auto Scaling**, and **Load Balancer**.
 
 #### ▸ **AMI Creation**
 
-* AMI (Amazon Machine Image) is a **template** to launch EC2 instances.
-* Includes OS, application server, and applications.
-* You can **create custom AMIs** from existing instances.
+- AMI (Amazon Machine Image) is a **template** to launch EC2 instances.
+- Includes OS, application server, and applications.
+- You can **create custom AMIs** from existing instances.
 
 #### ▸ **Instance Store**
 
-* **Temporary block-level storage**.
-* High speed, but **data lost** when instance is stopped, terminated, or crashes.
-* Useful for temporary caching, buffers.
+- **Temporary block-level storage**.
+- High speed, but **data lost** when instance is stopped, terminated, or crashes.
+- Useful for temporary caching, buffers.
 
 ---
 
@@ -180,17 +182,17 @@ Distributes incoming traffic across **multiple targets** (e.g., EC2 instances) t
 
 #### ▸ **Application Load Balancer (ALB)**
 
-* **Layer 7 (HTTP/HTTPS)** aware.
-* Supports **host-based and path-based routing**.
-* Used for web applications, REST APIs, microservices.
-* Integrates with **WAF**, **SSL termination**, and **container-based apps**.
+- **Layer 7 (HTTP/HTTPS)** aware.
+- Supports **host-based and path-based routing**.
+- Used for web applications, REST APIs, microservices.
+- Integrates with **WAF**, **SSL termination**, and **container-based apps**.
 
 #### ▸ **Network Load Balancer (NLB)**
 
-* **Layer 4 (TCP/UDP)** load balancing.
-* Handles **high-performance** and **low-latency** traffic.
-* Used for applications requiring **static IPs** and high throughput.
-* Scales to **millions of requests per second**.
+- **Layer 4 (TCP/UDP)** load balancing.
+- Handles **high-performance** and **low-latency** traffic.
+- Used for applications requiring **static IPs** and high throughput.
+- Scales to **millions of requests per second**.
 
 ---
 
@@ -200,18 +202,18 @@ Automatically adds or removes **EC2 instances** based on **demand** or **defined
 
 #### ▸ Key Features:
 
-* Ensures **availability and cost-efficiency**.
-* Works with **CloudWatch alarms** for dynamic scaling.
-* Can be used with **ALB** to distribute traffic to new instances.
-* Defines:
+- Ensures **availability and cost-efficiency**.
+- Works with **CloudWatch alarms** for dynamic scaling.
+- Can be used with **ALB** to distribute traffic to new instances.
+- Defines:
 
-  * **Min**, **Max**, and **Desired** number of instances.
-  * **Scaling policies** (manual, scheduled, or dynamic).
+  - **Min**, **Max**, and **Desired** number of instances.
+  - **Scaling policies** (manual, scheduled, or dynamic).
 
 #### ▸ Benefits:
 
-* **Resilience**: Replaces unhealthy instances.
-* **Cost-effective**: Scales out/in based on need.
+- **Resilience**: Replaces unhealthy instances.
+- **Cost-effective**: Scales out/in based on need.
 
 ---
 
@@ -221,41 +223,41 @@ A **VPC** is your own **isolated network** within AWS where you can launch AWS r
 
 #### ▸ **Public Subnet**
 
-* **Accessible from the internet**.
-* Typically hosts **web servers**, **ALBs**, etc.
-* Requires:
+- **Accessible from the internet**.
+- Typically hosts **web servers**, **ALBs**, etc.
+- Requires:
 
-  * **Internet Gateway**
-  * **Route table entry to Internet Gateway**
+  - **Internet Gateway**
+  - **Route table entry to Internet Gateway**
 
 #### ▸ **Private Subnet**
 
-* **No direct internet access**.
-* Used for **databases**, **backend servers**, etc.
-* Can **access internet** using a **NAT Gateway** (for updates or outbound traffic).
+- **No direct internet access**.
+- Used for **databases**, **backend servers**, etc.
+- Can **access internet** using a **NAT Gateway** (for updates or outbound traffic).
 
 #### ▸ **Route Table**
 
-* Controls **network traffic routing**.
-* Each subnet must be associated with a **route table**.
-* Routes specify where traffic is sent (e.g., to Internet Gateway, NAT, VPC Peering).
+- Controls **network traffic routing**.
+- Each subnet must be associated with a **route table**.
+- Routes specify where traffic is sent (e.g., to Internet Gateway, NAT, VPC Peering).
 
 ---
 
 ### **12. Internet Gateway (IGW)**
 
-* A **managed gateway** that connects your **VPC to the internet**.
-* Required for **outbound and inbound** internet access to/from **public subnets**.
-* Must be **attached to the VPC** and **used in route tables**.
+- A **managed gateway** that connects your **VPC to the internet**.
+- Required for **outbound and inbound** internet access to/from **public subnets**.
+- Must be **attached to the VPC** and **used in route tables**.
 
 ---
 
 ### **13. NAT Gateway (Network Address Translation)**
 
-* Enables instances in a **private subnet** to **access the internet** for things like OS updates or downloading packages.
-* **Prevents internet-initiated inbound traffic** (i.e., maintains privacy).
-* Must be placed in a **public subnet**.
-* **Paid AWS managed service**, scales automatically.
+- Enables instances in a **private subnet** to **access the internet** for things like OS updates or downloading packages.
+- **Prevents internet-initiated inbound traffic** (i.e., maintains privacy).
+- Must be placed in a **public subnet**.
+- **Paid AWS managed service**, scales automatically.
 
 ---
 
@@ -263,44 +265,45 @@ A **VPC** is your own **isolated network** within AWS where you can launch AWS r
 
 #### ▸ **Flow Logs**
 
-* Captures **network traffic metadata** for:
+- Captures **network traffic metadata** for:
 
-  * Security analysis
-  * Troubleshooting
-  * Compliance
-* Logs stored in **CloudWatch** or **S3**.
+  - Security analysis
+  - Troubleshooting
+  - Compliance
+
+- Logs stored in **CloudWatch** or **S3**.
 
 #### ▸ **VPC Peering**
 
-* Connects **two VPCs** to communicate **privately** using **AWS backbone**.
-* Peered VPCs can be in **same or different regions/accounts**.
-* **No transitive peering**: VPC A ↔ VPC B ↔ VPC C does NOT mean A ↔ C.
+- Connects **two VPCs** to communicate **privately** using **AWS backbone**.
+- Peered VPCs can be in **same or different regions/accounts**.
+- **No transitive peering**: VPC A ↔ VPC B ↔ VPC C does NOT mean A ↔ C.
 
 #### ▸ **VPC Endpoints**
 
-* Allow **private connection** to AWS services (e.g., S3, DynamoDB) **without using the internet**.
-* Two types:
+- Allow **private connection** to AWS services (e.g., S3, DynamoDB) **without using the internet**.
+- Two types:
 
-  * **Interface endpoint**: Powered by **ENI (Elastic Network Interface)**.
-  * **Gateway endpoint**: Used for **S3 & DynamoDB**.
+  - **Interface endpoint**: Powered by **ENI (Elastic Network Interface)**.
+  - **Gateway endpoint**: Used for **S3 & DynamoDB**.
 
 ---
 
 ### **15. Elastic IP**
 
-* A **static, public IPv4 address** that you can assign to an EC2 instance.
-* Useful when you need a **fixed IP** for external access.
-* Can **reassociate** it if an instance is stopped or terminated.
-* **Limited by default**, charges apply if **not in use**.
+- A **static, public IPv4 address** that you can assign to an EC2 instance.
+- Useful when you need a **fixed IP** for external access.
+- Can **reassociate** it if an instance is stopped or terminated.
+- **Limited by default**, charges apply if **not in use**.
 
 ---
 
 ### **16. AWS PrivateLink**
 
-* Allows you to **privately access services** hosted in **another VPC** or **AWS service** using **private IPs**.
-* Uses **interface VPC endpoints** (powered by ENIs).
-* Traffic **stays within the AWS network**, not over the public internet.
-* Common use: Accessing services like **S3**, **SNS**, or **3rd-party SaaS apps** securely.
+- Allows you to **privately access services** hosted in **another VPC** or **AWS service** using **private IPs**.
+- Uses **interface VPC endpoints** (powered by ENIs).
+- Traffic **stays within the AWS network**, not over the public internet.
+- Common use: Accessing services like **S3**, **SNS**, or **3rd-party SaaS apps** securely.
 
 ▸ **Key Benefit**: **Secure**, **private**, and **scalable** connectivity to services **without exposing traffic to the internet**.
 
@@ -310,23 +313,23 @@ A **VPC** is your own **isolated network** within AWS where you can launch AWS r
 
 #### ▸ **Site-to-Site VPN**
 
-* Creates a **secure encrypted tunnel** between **your on-premises network** and **AWS VPC** over the **public internet**.
-* Uses **IPSec**.
-* Easy to set up and **cost-effective**, but may have **latency** or **bandwidth fluctuations**.
+- Creates a **secure encrypted tunnel** between **your on-premises network** and **AWS VPC** over the **public internet**.
+- Uses **IPSec**.
+- Easy to set up and **cost-effective**, but may have **latency** or **bandwidth fluctuations**.
 
 #### ▸ **AWS Direct Connect**
 
-* Provides a **dedicated physical connection** from your on-premises data center to AWS.
-* **More reliable**, **lower latency**, and **higher bandwidth** than VPN.
-* Used when you need **stable, consistent network performance** (e.g., for large data transfers, hybrid cloud setups).
+- Provides a **dedicated physical connection** from your on-premises data center to AWS.
+- **More reliable**, **lower latency**, and **higher bandwidth** than VPN.
+- Used when you need **stable, consistent network performance** (e.g., for large data transfers, hybrid cloud setups).
 
 ---
 
 ### **18. AWS Client VPN**
 
-* A **managed VPN service** that allows **remote users (e.g., employees)** to securely connect to AWS or on-premises networks.
-* **OpenVPN-based** and supports **multi-factor authentication (MFA)**.
-* Scales automatically and supports **access from laptops, desktops, etc.**
+- A **managed VPN service** that allows **remote users (e.g., employees)** to securely connect to AWS or on-premises networks.
+- **OpenVPN-based** and supports **multi-factor authentication (MFA)**.
+- Scales automatically and supports **access from laptops, desktops, etc.**
 
 ▸ Think: **Site-to-Site = office to AWS**,
 **Client VPN = remote worker to AWS**.
@@ -335,10 +338,10 @@ A **VPC** is your own **isolated network** within AWS where you can launch AWS r
 
 ### **19. AWS Transit Gateway**
 
-* A **central hub** to connect **multiple VPCs**, **on-prem networks**, and **VPNs**.
-* Replaces the need for **complex VPC peering** (which is 1-to-1).
-* Uses a **hub-and-spoke** model.
-* Simplifies **routing**, **security**, and **management** across large architectures.
+- A **central hub** to connect **multiple VPCs**, **on-prem networks**, and **VPNs**.
+- Replaces the need for **complex VPC peering** (which is 1-to-1).
+- Uses a **hub-and-spoke** model.
+- Simplifies **routing**, **security**, and **management** across large architectures.
 
 ▸ Scales well for **enterprise and hybrid cloud** setups.
 
@@ -368,10 +371,10 @@ A **Content Delivery Network (CDN)** that delivers **web content, videos, APIs**
 
 #### ▸ Key Points:
 
-* Uses a **global network of edge locations** (200+ worldwide).
-* Reduces **latency** and **server load**.
-* Integrates with **S3**, **ALB**, **EC2**, and **Route 53**.
-* Supports **HTTPS**, **Geo-restriction**, and **DDoS protection** via AWS Shield.
+- Uses a **global network of edge locations** (200+ worldwide).
+- Reduces **latency** and **server load**.
+- Integrates with **S3**, **ALB**, **EC2**, and **Route 53**.
+- Supports **HTTPS**, **Geo-restriction**, and **DDoS protection** via AWS Shield.
 
 ▸ **Use case**: Serving static assets for websites, streaming video, securing APIs.
 
@@ -383,16 +386,16 @@ A **scalable and highly available Domain Name System (DNS)** web service.
 
 #### ▸ Key Functions:
 
-* **Domain Registration**: Buy and manage domain names (e.g., `example.com`).
-* **DNS Resolution**: Converts domain names into IP addresses.
-* **Health Checks**: Route traffic only to healthy resources.
-* **Routing Policies**:
+- **Domain Registration**: Buy and manage domain names (e.g., `example.com`).
+- **DNS Resolution**: Converts domain names into IP addresses.
+- **Health Checks**: Route traffic only to healthy resources.
+- **Routing Policies**:
 
-  * **Simple routing**
-  * **Failover routing**
-  * **Latency-based routing**
-  * **Geolocation routing**
-  * **Weighted routing**
+  - **Simple routing**
+  - **Failover routing**
+  - **Latency-based routing**
+  - **Geolocation routing**
+  - **Weighted routing**
 
 ▸ **Use case**: Directing user traffic to the nearest or healthiest AWS resource (e.g., EC2 or ALB).
 
@@ -404,14 +407,14 @@ A service that helps you **automate infrastructure deployment** using **code (In
 
 #### ▸ How it works:
 
-* You define resources (EC2, S3, IAM, etc.) in a **YAML/JSON template**.
-* CloudFormation creates and manages them automatically.
+- You define resources (EC2, S3, IAM, etc.) in a **YAML/JSON template**.
+- CloudFormation creates and manages them automatically.
 
 ▸ **Key Benefits**:
 
-* **Repeatability**: Same setup in dev/test/prod.
-* **Automation**: No manual provisioning.
-* **Rollback support**: Automatically reverts on failure.
+- **Repeatability**: Same setup in dev/test/prod.
+- **Automation**: No manual provisioning.
+- **Rollback support**: Automatically reverts on failure.
 
 ---
 
@@ -421,9 +424,9 @@ A **software development framework** to define AWS infrastructure using **progra
 
 #### ▸ Key Differences from CloudFormation:
 
-* CDK is **code-first**, CloudFormation is **declarative**.
-* CDK synthesizes into a CloudFormation template under the hood.
-* Great for **developers comfortable with code**, supports abstraction and reuse.
+- CDK is **code-first**, CloudFormation is **declarative**.
+- CDK synthesizes into a CloudFormation template under the hood.
+- Great for **developers comfortable with code**, supports abstraction and reuse.
 
 ▸ **Use case**: Automating infrastructure with real programming logic and reusable constructs.
 
@@ -435,14 +438,14 @@ A **fully managed in-memory data store** that boosts application performance by 
 
 #### ▸ Two Engine Options:
 
-* **Redis**: Supports advanced data structures, pub/sub, backups.
-* **Memcached**: Simple and fast caching engine.
+- **Redis**: Supports advanced data structures, pub/sub, backups.
+- **Memcached**: Simple and fast caching engine.
 
 #### ▸ Benefits:
 
-* **Low latency** data access (microseconds).
-* Reduces **load on databases**.
-* Supports **real-time apps**, leaderboards, session stores, etc.
+- **Low latency** data access (microseconds).
+- Reduces **load on databases**.
+- Supports **real-time apps**, leaderboards, session stores, etc.
 
 ▸ **Use case**: Caching frequent queries, speeding up web apps, offloading DBs.
 
@@ -454,11 +457,12 @@ A **Platform-as-a-Service (PaaS)** that lets you **deploy web applications** wit
 
 #### ▸ Key Features:
 
-* Supports **Java, Python, Node.js, PHP, .NET, Go, Ruby**, and Docker.
-* You just upload your code — AWS handles provisioning:
+- Supports **Java, Python, Node.js, PHP, .NET, Go, Ruby**, and Docker.
+- You just upload your code — AWS handles provisioning:
 
-  * EC2, ELB, Auto Scaling, RDS, etc.
-* You can still **access the infrastructure** (like EC2) if needed.
+  - EC2, ELB, Auto Scaling, RDS, etc.
+
+- You can still **access the infrastructure** (like EC2) if needed.
 
 ▸ **Use case**: Quickly deploy a web app with minimal configuration.
 
@@ -470,9 +474,9 @@ A **deployment automation tool** that helps you **deploy code to EC2, Lambda, or
 
 #### ▸ Features:
 
-* Supports **rolling updates**, **blue/green deployments**, and **canary releases**.
-* Minimizes **downtime** and supports **automatic rollback** if something fails.
-* Tracks **deployment status** and logs.
+- Supports **rolling updates**, **blue/green deployments**, and **canary releases**.
+- Minimizes **downtime** and supports **automatic rollback** if something fails.
+- Tracks **deployment status** and logs.
 
 ▸ **Use case**: Automated code rollout to your servers or serverless apps.
 
@@ -484,9 +488,9 @@ A **fully managed Git-based source code repository** similar to GitHub or GitLab
 
 #### ▸ Key Points:
 
-* **Secure** (integrates with IAM).
-* No size limits on repos or files.
-* Code is stored **privately in AWS**.
+- **Secure** (integrates with IAM).
+- No size limits on repos or files.
+- Code is stored **privately in AWS**.
 
 ▸ **Use case**: Store source code, track versions, and collaborate with your team on AWS.
 
@@ -498,9 +502,9 @@ A **build service** that compiles source code, runs tests, and produces artifact
 
 #### ▸ How it fits in DevOps:
 
-* Runs as part of CI/CD pipeline.
-* You define **build commands** in a `buildspec.yml` file.
-* Scales automatically and **charges by the minute**.
+- Runs as part of CI/CD pipeline.
+- You define **build commands** in a `buildspec.yml` file.
+- Scales automatically and **charges by the minute**.
 
 ▸ **Use case**: Compile code, run tests, and package the app automatically after every change.
 
@@ -512,9 +516,9 @@ A **CI/CD service** to **automate the full software release process**.
 
 #### ▸ Key Concepts:
 
-* Connects **CodeCommit** → **CodeBuild** → **CodeDeploy** into stages.
-* Automatically runs each stage on code change.
-* Supports integration with **GitHub, Jenkins**, third-party tools.
+- Connects **CodeCommit** → **CodeBuild** → **CodeDeploy** into stages.
+- Automatically runs each stage on code change.
+- Supports integration with **GitHub, Jenkins**, third-party tools.
 
 ▸ **Use case**: Automate and visualize your app release pipeline from source to deployment.
 
@@ -526,8 +530,8 @@ A **fully managed software artifact repository** for storing packages (dependenc
 
 #### ▸ Supports:
 
-* **Maven, npm, PyPI, NuGet** (JavaScript, Python, Java, .NET)
-* Integrates with **CodeBuild**, **CodePipeline**
+- **Maven, npm, PyPI, NuGet** (JavaScript, Python, Java, .NET)
+- Integrates with **CodeBuild**, **CodePipeline**
 
 ▸ **Use Case**: Share and manage **build dependencies** across teams or projects securely.
 
@@ -535,14 +539,14 @@ A **fully managed software artifact repository** for storing packages (dependenc
 
 ### **32. AWS Systems Manager (SSM)**
 
-A **central management service** for AWS infrastructure — think of it as a *Swiss Army knife* for system admins.
+A **central management service** for AWS infrastructure — think of it as a _Swiss Army knife_ for system admins.
 
 #### ▸ Key Features:
 
-* **Session Manager**: Secure shell access (SSH-less) to EC2.
-* **Run Command**: Execute shell commands across multiple EC2 instances.
-* **Patch Manager**: Automate OS patching.
-* **Parameter Store**: Securely store configuration variables like API keys.
+- **Session Manager**: Secure shell access (SSH-less) to EC2.
+- **Run Command**: Execute shell commands across multiple EC2 instances.
+- **Patch Manager**: Automate OS patching.
+- **Parameter Store**: Securely store configuration variables like API keys.
 
 ▸ **Use Case**: Operate, secure, and automate large-scale EC2 and hybrid environments.
 
@@ -554,8 +558,8 @@ Speeds up **uploading large files to S3 buckets** over long distances using Amaz
 
 #### ▸ How it works:
 
-* Users upload to a **nearby AWS edge location** (like CloudFront).
-* Data is then transferred quickly through AWS’s **backbone network** to your S3 bucket.
+- Users upload to a **nearby AWS edge location** (like CloudFront).
+- Data is then transferred quickly through AWS’s **backbone network** to your S3 bucket.
 
 ▸ **Use Case**: Upload files from far-away locations (e.g., from India to a US S3 bucket) **faster** than regular internet uploads.
 
@@ -567,8 +571,8 @@ Improves **performance and availability** of global applications by **routing tr
 
 #### ▸ Features:
 
-* Uses **static IPs** that route users to the **optimal AWS endpoint**.
-* Unlike CloudFront (which caches content), Global Accelerator accelerates **non-cacheable, dynamic content** (like APIs).
+- Uses **static IPs** that route users to the **optimal AWS endpoint**.
+- Unlike CloudFront (which caches content), Global Accelerator accelerates **non-cacheable, dynamic content** (like APIs).
 
 ▸ **Use Case**: Real-time applications (like gaming, streaming, APIs) that need **global, low-latency access**.
 
@@ -580,8 +584,8 @@ Brings **AWS infrastructure and services to your on-premises** data center.
 
 #### ▸ What It Does:
 
-* You run AWS services **locally** while staying connected to the **AWS cloud**.
-* Supports services like EC2, EBS, RDS, S3, and ECS locally.
+- You run AWS services **locally** while staying connected to the **AWS cloud**.
+- Supports services like EC2, EBS, RDS, S3, and ECS locally.
 
 ▸ **Use Case**: Companies needing **low latency**, **data residency**, or operating in areas with **limited AWS region access**.
 
@@ -593,9 +597,9 @@ Brings **AWS services to telecom 5G networks** for **ultra-low-latency** applica
 
 #### ▸ Key Points:
 
-* Deployed in **Wavelength Zones** inside **telecom provider data centers**.
-* Ideal for apps like **AR/VR, IoT, video streaming, real-time gaming**.
-* Keeps traffic closer to end users, bypassing long internet routes.
+- Deployed in **Wavelength Zones** inside **telecom provider data centers**.
+- Ideal for apps like **AR/VR, IoT, video streaming, real-time gaming**.
+- Keeps traffic closer to end users, bypassing long internet routes.
 
 ▸ **Use case**: Deliver **real-time services over 5G** with extremely low latency (single-digit milliseconds).
 
@@ -607,9 +611,9 @@ AWS infrastructure that brings **compute, storage, database** services **closer 
 
 #### ▸ Key Points:
 
-* Extends AWS regions to **cities where there's no full region**.
-* Reduces **latency** for end-users in metros like Los Angeles, Mumbai, etc.
-* You can run services like **EC2, EBS, ELB, RDS, ECS** locally.
+- Extends AWS regions to **cities where there's no full region**.
+- Reduces **latency** for end-users in metros like Los Angeles, Mumbai, etc.
+- You can run services like **EC2, EBS, ELB, RDS, ECS** locally.
 
 ▸ **Use case**: Latency-sensitive workloads (like video editing, gaming) in cities **far from existing AWS regions**.
 
@@ -621,11 +625,11 @@ Explains **who is responsible** for what in AWS: **AWS vs. YOU (the customer)**.
 
 #### ▸ AWS is responsible for:
 
-* **Security “of” the cloud**: physical infrastructure, networking, hardware, managed services (like RDS platform).
+- **Security “of” the cloud**: physical infrastructure, networking, hardware, managed services (like RDS platform).
 
 #### ▸ Customer is responsible for:
 
-* **Security “in” the cloud**: your data, access controls, OS patching (for EC2), configuration, IAM, etc.
+- **Security “in” the cloud**: your data, access controls, OS patching (for EC2), configuration, IAM, etc.
 
 #### ▸ Examples:
 
@@ -644,9 +648,9 @@ A **Distributed Denial of Service (DDoS)** attack floods a server or app with ma
 
 #### ▸ AWS Protects You By:
 
-* Built-in protections with **Route 53, CloudFront, ELB**.
-* Using **scalable and redundant infrastructure** to absorb traffic.
-* Integrating services like **AWS Shield** and **WAF (Web App Firewall)**.
+- Built-in protections with **Route 53, CloudFront, ELB**.
+- Using **scalable and redundant infrastructure** to absorb traffic.
+- Integrating services like **AWS Shield** and **WAF (Web App Firewall)**.
 
 ▸ **Use case**: Automatically protect high-traffic apps from malicious spikes.
 
@@ -673,10 +677,10 @@ A **managed network firewall** for **VPCs** to inspect and control traffic at th
 
 #### ▸ Key Features:
 
-* Stateful firewall rules to allow/block **IP addresses, ports, protocols**.
-* Deep packet inspection (DPI).
-* Protects **VPCs** from common threats like **port scanning, malware, and exploits**.
-* Integrates with **VPC route tables** and **subnets**.
+- Stateful firewall rules to allow/block **IP addresses, ports, protocols**.
+- Deep packet inspection (DPI).
+- Protects **VPCs** from common threats like **port scanning, malware, and exploits**.
+- Integrates with **VPC route tables** and **subnets**.
 
 ▸ **Use Case**: Add **advanced traffic filtering** for VPCs in sensitive workloads (e.g., finance, healthcare).
 
@@ -688,10 +692,10 @@ A **centralized security management service** for managing **firewall rules acro
 
 #### ▸ Manages:
 
-* **AWS WAF** (Web Application Firewall)
-* **Shield Advanced**
-* **VPC Network Firewall**
-* **Security Groups**
+- **AWS WAF** (Web Application Firewall)
+- **Shield Advanced**
+- **VPC Network Firewall**
+- **Security Groups**
 
 ▸ **Use Case**: Enterprises using **AWS Organizations** to apply consistent firewall/security policies across multiple accounts and regions.
 
@@ -703,13 +707,13 @@ AWS **allows penetration testing** (ethical hacking) on **certain approved servi
 
 #### ▸ Allowed Services (no approval needed):
 
-* EC2, RDS, CloudFront, Aurora, API Gateway, Lambda, etc.
+- EC2, RDS, CloudFront, Aurora, API Gateway, Lambda, etc.
 
 #### ▸ Rules:
 
-* Must **not impact other AWS customers**.
-* Must follow AWS's **[Penetration Testing Policy](https://aws.amazon.com/security/penetration-testing/)**.
-* Some types of tests (e.g., DDoS, port flooding) **are NOT allowed** without special permission.
+- Must **not impact other AWS customers**.
+- Must follow AWS's **[Penetration Testing Policy](https://aws.amazon.com/security/penetration-testing/)**.
+- Some types of tests (e.g., DDoS, port flooding) **are NOT allowed** without special permission.
 
 ▸ **Use Case**: Customers wanting to **test their own cloud infrastructure’s security**.
 
@@ -721,10 +725,10 @@ A **secure, managed encryption key service** for creating and controlling encryp
 
 #### ▸ Key Features:
 
-* Generates **Customer Master Keys (CMKs)**.
-* Supports **encryption at rest** for services like S3, EBS, RDS, etc.
-* Integrates with **CloudTrail** for audit logging.
-* Keys can be **customer-managed** or **AWS-managed**.
+- Generates **Customer Master Keys (CMKs)**.
+- Supports **encryption at rest** for services like S3, EBS, RDS, etc.
+- Integrates with **CloudTrail** for audit logging.
+- Keys can be **customer-managed** or **AWS-managed**.
 
 ▸ **Use Case**: Encrypting sensitive data and controlling who can decrypt it using **IAM + KMS** permissions.
 
@@ -736,9 +740,9 @@ A **logging service** that records **all account-level activity** and API calls 
 
 #### ▸ Tracks:
 
-* **Who did what**, when, and from where.
-* Actions taken via **AWS Console, CLI, SDKs, and APIs**.
-* Stored in **S3** and can be analyzed in **CloudWatch or Athena**.
+- **Who did what**, when, and from where.
+- Actions taken via **AWS Console, CLI, SDKs, and APIs**.
+- Stored in **S3** and can be analyzed in **CloudWatch or Athena**.
 
 ▸ **Use Case**: **Security auditing**, **compliance**, **incident response**, and **troubleshooting**.
 
@@ -750,9 +754,9 @@ Manages **SSL/TLS certificates** to enable secure HTTPS connections to your webs
 
 #### ▸ Key Features:
 
-* **Provision, manage, and renew** certificates automatically.
-* Use with services like **Elastic Load Balancer, CloudFront, API Gateway**.
-* No manual steps for validation or renewal (for ACM-provided certs).
+- **Provision, manage, and renew** certificates automatically.
+- Use with services like **Elastic Load Balancer, CloudFront, API Gateway**.
+- No manual steps for validation or renewal (for ACM-provided certs).
 
 ▸ **Use Case**: Secure websites or APIs with **free, auto-renewing SSL certificates**.
 
@@ -764,10 +768,10 @@ A **secure store** for managing **secrets** like API keys, database credentials,
 
 #### ▸ Key Features:
 
-* Automatically **rotates secrets** (e.g., DB passwords).
-* **Encrypts secrets** using AWS KMS.
-* Fine-grained access control via **IAM**.
-* Logs secret access with **CloudTrail**.
+- Automatically **rotates secrets** (e.g., DB passwords).
+- **Encrypts secrets** using AWS KMS.
+- Fine-grained access control via **IAM**.
+- Logs secret access with **CloudTrail**.
 
 ▸ **Use Case**: Securely store and rotate app credentials or tokens.
 
@@ -779,9 +783,9 @@ Provides **on-demand access to AWS compliance reports** and **agreements**.
 
 #### ▸ Includes:
 
-* SOC 1, SOC 2, PCI, ISO, GDPR compliance docs.
-* **NDA-based access** to AWS audit documentation.
-* Reports are downloadable and updated regularly.
+- SOC 1, SOC 2, PCI, ISO, GDPR compliance docs.
+- **NDA-based access** to AWS audit documentation.
+- Reports are downloadable and updated regularly.
 
 ▸ **Use Case**: Organizations needing to **verify AWS compliance** for legal/regulatory needs.
 
@@ -793,10 +797,10 @@ An **intelligent threat detection** service that monitors AWS accounts for **mal
 
 #### ▸ Detects:
 
-* Unusual login attempts.
-* Compromised IAM users or EC2 instances.
-* Reconnaissance (e.g., port scanning).
-* Uses **machine learning** and **threat intel feeds**.
+- Unusual login attempts.
+- Compromised IAM users or EC2 instances.
+- Reconnaissance (e.g., port scanning).
+- Uses **machine learning** and **threat intel feeds**.
 
 ▸ **Use Case**: Automatically monitor for **suspicious behavior** without installing anything.
 
@@ -808,9 +812,9 @@ Automatically **scans AWS workloads** for **vulnerabilities** and **security iss
 
 #### ▸ Scans:
 
-* EC2 instances for **CVEs (Common Vulnerabilities and Exposures)**.
-* Lambda functions for **code flaws**.
-* **ECR (container images)** for known risks.
+- EC2 instances for **CVEs (Common Vulnerabilities and Exposures)**.
+- Lambda functions for **code flaws**.
+- **ECR (container images)** for known risks.
 
 ▸ **Use Case**: Continuous **security assessment** of EC2, Lambda, and containers.
 
@@ -822,9 +826,9 @@ Tracks **configuration changes** in your AWS resources and ensures they **comply
 
 #### ▸ What it does:
 
-* Continuously **monitors and records** resource configuration changes.
-* Shows how a resource **was configured at any point in time**.
-* Checks **compliance** (e.g., S3 buckets must be private).
+- Continuously **monitors and records** resource configuration changes.
+- Shows how a resource **was configured at any point in time**.
+- Checks **compliance** (e.g., S3 buckets must be private).
 
 ▸ **Use Case**: **Audit trail + compliance checking** for your infrastructure.
 
@@ -836,9 +840,9 @@ A **data security and privacy service** that uses **ML** to discover and protect
 
 #### ▸ What it does:
 
-* Automatically finds **PII** (names, addresses, credit card info, etc.).
-* Flags **unprotected or publicly exposed** data.
-* Provides dashboards for **data classification**.
+- Automatically finds **PII** (names, addresses, credit card info, etc.).
+- Flags **unprotected or publicly exposed** data.
+- Provides dashboards for **data classification**.
 
 ▸ **Use Case**: **Protect personal and sensitive data** stored in S3.
 
@@ -850,9 +854,9 @@ A **centralized dashboard** for managing and prioritizing **security alerts** fr
 
 #### ▸ Integrates with:
 
-* **GuardDuty, Macie, Inspector, Firewall Manager**, and third-party tools.
-* Aggregates findings and **ranks by severity**.
-* Helps meet compliance frameworks like **CIS AWS Foundations**.
+- **GuardDuty, Macie, Inspector, Firewall Manager**, and third-party tools.
+- Aggregates findings and **ranks by severity**.
+- Helps meet compliance frameworks like **CIS AWS Foundations**.
 
 ▸ **Use Case**: One place to **view, analyze, and act on security alerts**.
 
@@ -864,9 +868,9 @@ Helps **investigate and analyze suspicious activity** in your AWS accounts using
 
 #### ▸ What it does:
 
-* Automatically collects and links events.
-* Builds **visual timelines and graphs** to show what happened.
-* Useful during **security incident investigations**.
+- Automatically collects and links events.
+- Builds **visual timelines and graphs** to show what happened.
+- Useful during **security incident investigations**.
 
 ▸ **Use Case**: Dig deeper into “what happened” after a **security alert** is triggered.
 
@@ -878,9 +882,9 @@ A **reporting system** for notifying AWS if **someone is using AWS resources mal
 
 #### ▸ Used when:
 
-* You see spam, phishing, port scanning, DDoS originating from AWS IPs.
-* **Not for reporting issues with your own AWS account**.
-* Report via: [aws.amazon.com/forms/report-abuse](https://aws.amazon.com/forms/report-abuse)
+- You see spam, phishing, port scanning, DDoS originating from AWS IPs.
+- **Not for reporting issues with your own AWS account**.
+- Report via: [aws.amazon.com/forms/report-abuse](https://aws.amazon.com/forms/report-abuse)
 
 ▸ **Use Case**: **Report misuse** of AWS resources by others (e.g., suspicious traffic from EC2 instance not owned by you).
 
@@ -892,9 +896,9 @@ Helps you **identify resources in your AWS account that are accessible publicly 
 
 #### ▸ What it does:
 
-* Analyzes **S3 buckets, IAM roles, KMS keys, Lambda functions**, etc.
-* Alerts you if a resource is **shared with external accounts or made public**.
-* Works **automatically** and shows findings in IAM or via AWS CLI.
+- Analyzes **S3 buckets, IAM roles, KMS keys, Lambda functions**, etc.
+- Alerts you if a resource is **shared with external accounts or made public**.
+- Works **automatically** and shows findings in IAM or via AWS CLI.
 
 ▸ **Use Case**: **Detect accidental public access** to sensitive AWS resources.
 
@@ -906,9 +910,9 @@ Part of **Amazon CloudWatch** — tracks **performance metrics** for AWS service
 
 #### ▸ Examples:
 
-* **EC2**: CPU utilization, disk I/O, network usage.
-* **RDS**: DB connections, read/write throughput.
-* **Custom metrics**: App-level stats like user counts or transaction speeds.
+- **EC2**: CPU utilization, disk I/O, network usage.
+- **RDS**: DB connections, read/write throughput.
+- **Custom metrics**: App-level stats like user counts or transaction speeds.
 
 ▸ **Use Case**: **Monitor AWS services** and get alerts when usage crosses thresholds.
 
@@ -920,14 +924,14 @@ Lets you **collect, monitor, and store logs** from AWS services and your applica
 
 #### ▸ Examples:
 
-* **Lambda function output logs**
-* **EC2 system logs**
-* **Application logs**
+- **Lambda function output logs**
+- **EC2 system logs**
+- **Application logs**
 
 #### ▸ Features:
 
-* Can set up **log-based alarms**
-* Integrates with **CloudWatch Insights** for log analysis
+- Can set up **log-based alarms**
+- Integrates with **CloudWatch Insights** for log analysis
 
 ▸ **Use Case**: **Store and analyze logs** for troubleshooting and audits.
 
@@ -935,15 +939,15 @@ Lets you **collect, monitor, and store logs** from AWS services and your applica
 
 ### **59. Amazon EventBridge**
 
-*(Previously CloudWatch Events)*
+_(Previously CloudWatch Events)_
 
 A **serverless event bus** that connects AWS services with your own apps, based on **events and rules**.
 
 #### ▸ Key Uses:
 
-* **Trigger Lambda functions** when new S3 objects are uploaded.
-* Send events from **SaaS apps (like Zendesk, Auth0)** to AWS.
-* **Automated workflows** based on AWS service events.
+- **Trigger Lambda functions** when new S3 objects are uploaded.
+- Send events from **SaaS apps (like Zendesk, Auth0)** to AWS.
+- **Automated workflows** based on AWS service events.
 
 ▸ **Use Case**: **Event-driven automation** between services and apps.
 
@@ -955,22 +959,22 @@ A **distributed tracing tool** for debugging and analyzing **microservices and s
 
 #### ▸ What it shows:
 
-* Latency across services (e.g., API Gateway → Lambda → DynamoDB)
-* Service maps with bottlenecks highlighted
-* Errors and performance traces
+- Latency across services (e.g., API Gateway → Lambda → DynamoDB)
+- Service maps with bottlenecks highlighted
+- Errors and performance traces
 
 ▸ **Use Case**: **Troubleshoot slow or error-prone APIs** and pinpoint performance issues.
 
 ---
 
-###  **61. Amazon CodeGuru**
+### **61. Amazon CodeGuru**
 
 An **AI-powered tool** for **code reviews** and **application performance profiling**.
 
 #### ▸ Two Main Features:
 
-* **CodeGuru Reviewer**: Analyzes Java/Python code for **bugs, inefficiencies, and security issues**.
-* **CodeGuru Profiler**: Finds **performance bottlenecks** in live apps.
+- **CodeGuru Reviewer**: Analyzes Java/Python code for **bugs, inefficiencies, and security issues**.
+- **CodeGuru Profiler**: Finds **performance bottlenecks** in live apps.
 
 ▸ **Use Case**: Help developers **write better, more efficient, and secure code** using AI recommendations.
 
@@ -982,9 +986,9 @@ Provides **real-time and personalized alerts** about **AWS service health** and 
 
 #### ▸ Types of Notifications:
 
-* Service outages or disruptions.
-* Planned maintenance.
-* Issues **specifically affecting your AWS resources**.
+- Service outages or disruptions.
+- Planned maintenance.
+- Issues **specifically affecting your AWS resources**.
 
 ▸ **Use Case**: **Stay informed** about ongoing or upcoming events that affect **your AWS infrastructure**.
 
@@ -994,11 +998,11 @@ Provides **real-time and personalized alerts** about **AWS service health** and 
 
 This isn’t a specific AWS service but refers to **how AWS enables different services to communicate seamlessly**, often using:
 
-* **Amazon EventBridge** (event bus)
-* **Amazon SQS** (message queue)
-* **Amazon SNS** (notifications)
-* **API Gateway** (connect APIs)
-* **Step Functions** (workflow orchestration)
+- **Amazon EventBridge** (event bus)
+- **Amazon SQS** (message queue)
+- **Amazon SNS** (notifications)
+- **API Gateway** (connect APIs)
+- **Step Functions** (workflow orchestration)
 
 ▸ **Use Case**: Build **loosely coupled, scalable cloud applications** that communicate reliably.
 
@@ -1010,8 +1014,8 @@ A **message queuing service** that allows **decoupling** of components in a clou
 
 #### ▸ Types:
 
-* **Standard Queue** (default): High throughput, at-least-once delivery.
-* **FIFO Queue**: Ensures messages are processed **once** and **in order**.
+- **Standard Queue** (default): High throughput, at-least-once delivery.
+- **FIFO Queue**: Ensures messages are processed **once** and **in order**.
 
 ▸ **Use Case**: Enable **asynchronous communication** between microservices or serverless components (e.g., Lambda).
 
@@ -1023,9 +1027,9 @@ A **real-time data streaming service** for collecting, processing, and analyzing
 
 ### ▸ Components:
 
-* **Kinesis Data Streams**: Custom real-time stream processing.
-* **Kinesis Data Firehose**: Load real-time data into S3, Redshift, etc.
-* **Kinesis Analytics**: Run SQL on streaming data.
+- **Kinesis Data Streams**: Custom real-time stream processing.
+- **Kinesis Data Firehose**: Load real-time data into S3, Redshift, etc.
+- **Kinesis Analytics**: Run SQL on streaming data.
 
 ▸ **Use Case**: **Monitor clickstreams, IoT telemetry, or logs** in real-time and take action quickly.
 
@@ -1037,9 +1041,9 @@ A **fully managed pub/sub messaging service** for sending notifications or alert
 
 #### ▸ Features:
 
-* Supports multiple **protocols**: email, SMS, Lambda, HTTP, etc.
-* **Topic-based messaging**: Publishers send messages to a topic, and all subscribers receive it.
-* Used for **real-time push notifications**.
+- Supports multiple **protocols**: email, SMS, Lambda, HTTP, etc.
+- **Topic-based messaging**: Publishers send messages to a topic, and all subscribers receive it.
+- Used for **real-time push notifications**.
 
 ▸ **Use Case**: **Send alerts** (e.g., CloudWatch alarm to Ops team via email/SMS).
 
@@ -1051,8 +1055,8 @@ A **managed message broker** service for applications that use **traditional mes
 
 #### ▸ Key Point:
 
-* Supports **ActiveMQ** and **RabbitMQ** engines.
-* Useful when **migrating legacy apps** that can’t use modern services like SQS or SNS.
+- Supports **ActiveMQ** and **RabbitMQ** engines.
+- Useful when **migrating legacy apps** that can’t use modern services like SQS or SNS.
 
 ▸ **Use Case**: Migrate enterprise apps that use **standard messaging protocols**.
 
@@ -1064,9 +1068,9 @@ Records **API calls** and **user activity** across your AWS account for **audit 
 
 #### ▸ Tracks:
 
-* Who did what, when, and from where (console, SDK, CLI).
-* Supports **multi-region** and **organization-wide trails**.
-* Integrates with **S3 (storage)** and **CloudWatch (monitoring)**.
+- Who did what, when, and from where (console, SDK, CLI).
+- Supports **multi-region** and **organization-wide trails**.
+- Integrates with **S3 (storage)** and **CloudWatch (monitoring)**.
 
 ▸ **Use Case**: **Track changes, troubleshoot issues**, or **prove compliance**.
 
@@ -1078,9 +1082,9 @@ Used to **centrally manage and govern multiple AWS accounts**.
 
 #### ▸ Key Features:
 
-* Create **Organizational Units (OUs)**: Group accounts by team or purpose.
-* Apply **Service Control Policies (SCPs)**: Restrict what services/accounts can do.
-* **Consolidated Billing**: One bill for all accounts, plus shared volume discounts.
+- Create **Organizational Units (OUs)**: Group accounts by team or purpose.
+- Apply **Service Control Policies (SCPs)**: Restrict what services/accounts can do.
+- **Consolidated Billing**: One bill for all accounts, plus shared volume discounts.
 
 ▸ **Use Case**: Manage **large-scale AWS usage** across departments or environments.
 
@@ -1092,9 +1096,9 @@ Refers to **best practices** in setting up **multiple AWS accounts** for securit
 
 #### ▸ Strategy Examples:
 
-* Use **separate accounts** for **dev, test, prod**.
-* Apply **least privilege** via SCPs.
-* Use **AWS Organizations** for structure, governance, and billing.
+- Use **separate accounts** for **dev, test, prod**.
+- Apply **least privilege** via SCPs.
+- Use **AWS Organizations** for structure, governance, and billing.
 
 ▸ **Use Case**: Isolate workloads, improve **security, billing visibility, and fault isolation**.
 
@@ -1106,9 +1110,9 @@ A **feature of AWS Organizations** used to define **guardrails** for what **acco
 
 #### ▸ Key Points:
 
-* SCPs don’t grant permissions; they **limit maximum permissions** available.
-* Applied to **organizational units (OUs)** or individual accounts.
-* Common use: **Prevent deleting critical resources**, or **deny regions or services**.
+- SCPs don’t grant permissions; they **limit maximum permissions** available.
+- Applied to **organizational units (OUs)** or individual accounts.
+- Common use: **Prevent deleting critical resources**, or **deny regions or services**.
 
 ▸ **Use Case**: **Restrict services/actions across multiple accounts**.
 
@@ -1120,24 +1124,24 @@ A **setup-and-go** solution for quickly deploying a **secure multi-account AWS e
 
 #### ▸ What It Provides:
 
-* Automated setup of **landing zones** (preconfigured accounts + OUs).
-* Includes: AWS Organizations, SCPs, Config, CloudTrail, and Guardrails.
-* Simplifies governance for **multi-account environments**.
+- Automated setup of **landing zones** (preconfigured accounts + OUs).
+- Includes: AWS Organizations, SCPs, Config, CloudTrail, and Guardrails.
+- Simplifies governance for **multi-account environments**.
 
 ▸ **Use Case**: Set up a **pre-configured, secure AWS environment** with governance built-in.
 
 ---
 
-### **73. **AWS Resource Access Manager (RAM)**
+### **73. **AWS Resource Access Manager (RAM)\*\*
 
 Lets you **share AWS resources across accounts** without copying them.
 
 #### ▸ Shareable resources:
 
-* VPC subnets
-* Transit Gateways
-* Route53 Resolver Rules
-* License Manager configurations, etc.
+- VPC subnets
+- Transit Gateways
+- Route53 Resolver Rules
+- License Manager configurations, etc.
 
 ▸ **Use Case**: Allow **multiple AWS accounts to use shared resources** (e.g., shared VPC).
 
@@ -1149,9 +1153,9 @@ Allows organizations to **create and manage approved catalogs** of AWS resources
 
 #### ▸ What it does:
 
-* Admins define **pre-approved templates** (CloudFormation stacks).
-* Users (e.g., developers) can **launch resources without needing full access**.
-* Helps maintain **compliance, security, and standardization**.
+- Admins define **pre-approved templates** (CloudFormation stacks).
+- Users (e.g., developers) can **launch resources without needing full access**.
+- Helps maintain **compliance, security, and standardization**.
 
 ▸ **Use Case**: Enable self-service provisioning of **standardized infrastructure**.
 
@@ -1163,19 +1167,19 @@ Understanding AWS pricing is **key for the exam**. Major pricing models include:
 
 #### ▸ Compute (EC2, Lambda):
 
-* **On-Demand**: Pay per second/minute. No commitment.
-* **Reserved Instances**: Up to 75% discount for 1–3 year commitment.
-* **Spot Instances**: Up to 90% discount. Can be interrupted.
-* **Savings Plans**: Flexible discount model across instance families.
+- **On-Demand**: Pay per second/minute. No commitment.
+- **Reserved Instances**: Up to 75% discount for 1–3 year commitment.
+- **Spot Instances**: Up to 90% discount. Can be interrupted.
+- **Savings Plans**: Flexible discount model across instance families.
 
 #### ▸ Storage (S3, EBS, Glacier):
 
-* Charged by **GB stored**, **requests**, and **data transfer**.
+- Charged by **GB stored**, **requests**, and **data transfer**.
 
 #### ▸ Free Tier:
 
-* Always Free: e.g., 25 GB DynamoDB, 1 million Lambda requests.
-* 12-Month Free: e.g., 750 hours EC2 t2.micro.
+- Always Free: e.g., 25 GB DynamoDB, 1 million Lambda requests.
+- 12-Month Free: e.g., 750 hours EC2 t2.micro.
 
 ▸ **Use Case**: Choose the right pricing model to **optimize cost** based on workload patterns.
 
@@ -1187,9 +1191,9 @@ Uses **machine learning** to recommend optimal **compute resources** for your wo
 
 #### ▸ Key Features:
 
-* Analyzes usage of **EC2, Lambda, EBS, and Auto Scaling groups**.
-* Suggests instance types and sizes to reduce **underutilization or over-provisioning**.
-* Recommendations based on **past 14 days** of usage.
+- Analyzes usage of **EC2, Lambda, EBS, and Auto Scaling groups**.
+- Suggests instance types and sizes to reduce **underutilization or over-provisioning**.
+- Recommendations based on **past 14 days** of usage.
 
 ▸ **Use Case**: **Optimize cost and performance** by right-sizing resources.
 
@@ -1201,9 +1205,9 @@ A **free web-based tool** to **estimate costs** of AWS services before you use t
 
 #### ▸ Key Features:
 
-* Supports pricing estimation for **EC2, S3, RDS, Lambda**, etc.
-* Allows you to **customize usage patterns, region, storage, duration**.
-* Output includes **detailed cost breakdowns** and **monthly estimates**.
+- Supports pricing estimation for **EC2, S3, RDS, Lambda**, etc.
+- Allows you to **customize usage patterns, region, storage, duration**.
+- Output includes **detailed cost breakdowns** and **monthly estimates**.
 
 ▸ **Use Case**: **Forecast AWS spend** for budgeting or pre-project approval.
 
@@ -1213,16 +1217,16 @@ A **free web-based tool** to **estimate costs** of AWS services before you use t
 
 A **management tool** that provides **real-time recommendations** for improving:
 
-* **Security**
-* **Cost optimization**
-* **Performance**
-* **Fault tolerance**
-* **Service limits**
+- **Security**
+- **Cost optimization**
+- **Performance**
+- **Fault tolerance**
+- **Service limits**
 
 #### ▸ Tiers:
 
-* **Basic (free)**: 7 core checks.
-* **Full (Business/Enterprise support plan)**: All checks across 5 categories.
+- **Basic (free)**: 7 core checks.
+- **Full (Business/Enterprise support plan)**: All checks across 5 categories.
 
 ▸ **Use Case**: Proactive **best practice checks** to improve your AWS environment.
 
@@ -1234,10 +1238,10 @@ An **interactive tool** to **visualize, analyze, and forecast** AWS usage and sp
 
 #### ▸ Key Features:
 
-* **Daily, monthly, or hourly spend breakdowns**
-* **Filtering by service, region, linked account**
-* Forecast **future usage** based on trends
-* Works well with **Budgets, Tags, and Consolidated Billing**
+- **Daily, monthly, or hourly spend breakdowns**
+- **Filtering by service, region, linked account**
+- Forecast **future usage** based on trends
+- Works well with **Budgets, Tags, and Consolidated Billing**
 
 ▸ **Use Case**: **Track and control AWS costs**, especially in multi-account setups.
 
@@ -1247,12 +1251,12 @@ An **interactive tool** to **visualize, analyze, and forecast** AWS usage and sp
 
 #### ▸ Included by default:
 
-* **24/7 access** to:
+- **24/7 access** to:
 
-  * **AWS documentation**
-  * **Whitepapers**
-  * **AWS Trusted Advisor – 7 core checks**
-  * **AWS Health Dashboard**
+  - **AWS documentation**
+  - **Whitepapers**
+  - **AWS Trusted Advisor – 7 core checks**
+  - **AWS Health Dashboard**
 
 ▸ **Use Case**: For **individuals and small teams** not needing direct support.
 
@@ -1262,12 +1266,13 @@ An **interactive tool** to **visualize, analyze, and forecast** AWS usage and sp
 
 #### ▸ Features:
 
-* **Business-hours email access** to Cloud Support Associates (unlimited cases).
-* Response time:
+- **Business-hours email access** to Cloud Support Associates (unlimited cases).
+- Response time:
 
-  * **< 12 hrs** for general guidance
-  * **< 24 hrs** for system impaired
-* Access to best practices, SDKs, and forums.
+  - **< 12 hrs** for general guidance
+  - **< 24 hrs** for system impaired
+
+- Access to best practices, SDKs, and forums.
 
 ▸ **Use Case**: For **development and testing** in non-production environments.
 
@@ -1277,13 +1282,14 @@ An **interactive tool** to **visualize, analyze, and forecast** AWS usage and sp
 
 #### ▸ Features:
 
-* 24/7 **phone, chat, and email support**
-* Response time:
+- 24/7 **phone, chat, and email support**
+- Response time:
 
-  * **< 1 hr** for production system down
-  * **< 12 hrs** for production impaired
-* Access to **full Trusted Advisor checks**
-* Access to AWS **Support API**
+  - **< 1 hr** for production system down
+  - **< 12 hrs** for production impaired
+
+- Access to **full Trusted Advisor checks**
+- Access to AWS **Support API**
 
 ▸ **Use Case**: For **production workloads** needing **faster support and guidance**.
 
@@ -1293,13 +1299,14 @@ An **interactive tool** to **visualize, analyze, and forecast** AWS usage and sp
 
 #### ▸ Features:
 
-* Designed for **mid-sized or fast-growing businesses**.
-* Includes everything in Business plan plus:
+- Designed for **mid-sized or fast-growing businesses**.
+- Includes everything in Business plan plus:
 
-  * Access to **Technical Account Manager (TAM)**
-  * **Monthly technical reviews**
-  * **Proactive case management**
-* Priority case handling and faster escalation.
+  - Access to **Technical Account Manager (TAM)**
+  - **Monthly technical reviews**
+  - **Proactive case management**
+
+- Priority case handling and faster escalation.
 
 ▸ **Use Case**: For companies beginning to scale and needing **hands-on guidance**.
 
@@ -1309,13 +1316,13 @@ An **interactive tool** to **visualize, analyze, and forecast** AWS usage and sp
 
 #### ▸ Features:
 
-* Everything from On-Ramp plus:
+- Everything from On-Ramp plus:
 
-  * **Designated Technical Account Manager (TAM)**
-  * **24/7 white-glove support**
-  * **Well-Architected Reviews**
-  * Access to **Infrastructure Event Management (IEM)** for large launches
-  * Concierge billing & account support
+  - **Designated Technical Account Manager (TAM)**
+  - **24/7 white-glove support**
+  - **Well-Architected Reviews**
+  - Access to **Infrastructure Event Management (IEM)** for large launches
+  - Concierge billing & account support
 
 ▸ **Use Case**: **Large-scale enterprises** with mission-critical apps on AWS needing **highest level of support**.
 
@@ -1327,12 +1334,12 @@ A **platform** used to **build, package, and run applications in containers**.
 
 #### ▸ Components:
 
-* **Docker Containers**: Lightweight, portable, isolated environments to run apps.
-* **Docker Hub**: Public repository to store and share container images.
+- **Docker Containers**: Lightweight, portable, isolated environments to run apps.
+- **Docker Hub**: Public repository to store and share container images.
 
 ▸ **Use Case**: Package an app and its dependencies into a **single container** for portability and consistency.
 
->  *Docker is not AWS-specific*, but AWS services like ECS, EKS, and Fargate support Docker-based containers.
+> _Docker is not AWS-specific_, but AWS services like ECS, EKS, and Fargate support Docker-based containers.
 
 ---
 
@@ -1342,9 +1349,9 @@ A **managed Kubernetes** service that makes it easy to run Kubernetes clusters o
 
 #### ▸ Key Benefits:
 
-* AWS **manages the Kubernetes control plane** (secure, scalable).
-* Integrates with **IAM, VPC, ALB, CloudWatch**.
-* You deploy your Docker containers using **Kubernetes YAML files**.
+- AWS **manages the Kubernetes control plane** (secure, scalable).
+- Integrates with **IAM, VPC, ALB, CloudWatch**.
+- You deploy your Docker containers using **Kubernetes YAML files**.
 
 ▸ **Use Case**: Run **containerized microservices** using Kubernetes.
 
@@ -1356,12 +1363,13 @@ A **fully managed container orchestration** service built by AWS.
 
 #### ▸ Key Features:
 
-* Run and scale **Docker containers**.
-* **Launch types**:
+- Run and scale **Docker containers**.
+- **Launch types**:
 
-  * **Fargate**: Serverless (no EC2 needed)
-  * **EC2**: You manage the infrastructure
-* Simple to use compared to EKS (no Kubernetes knowledge needed)
+  - **Fargate**: Serverless (no EC2 needed)
+  - **EC2**: You manage the infrastructure
+
+- Simple to use compared to EKS (no Kubernetes knowledge needed)
 
 ▸ **Use Case**: Deploy and manage containers **without Kubernetes complexity**.
 
@@ -1373,9 +1381,9 @@ A **fully managed Docker container registry** for storing and versioning contain
 
 #### ▸ Key Features:
 
-* Works with **ECS, EKS, Fargate**.
-* Private registry (unlike Docker Hub).
-* Supports **image scanning** for security.
+- Works with **ECS, EKS, Fargate**.
+- Private registry (unlike Docker Hub).
+- Supports **image scanning** for security.
 
 ▸ **Use Case**: Store **container images** securely for use in ECS/EKS deployments.
 
@@ -1387,9 +1395,9 @@ A **fully managed service** to create, publish, secure, and monitor **APIs at an
 
 #### ▸ Key Features:
 
-* Supports **REST, HTTP, and WebSocket APIs**
-* Integrates with **Lambda**, **EC2**, **ECS**, **backend services**
-* **Built-in throttling, authorization (IAM/Cognito), caching**
+- Supports **REST, HTTP, and WebSocket APIs**
+- Integrates with **Lambda**, **EC2**, **ECS**, **backend services**
+- **Built-in throttling, authorization (IAM/Cognito), caching**
 
 ▸ **Use Case**: Build secure, scalable **APIs** for your application backend.
 
@@ -1401,9 +1409,9 @@ A **fully managed service for running batch computing workloads** on AWS.
 
 #### ▸ Key Features:
 
-* Dynamically provisions **compute resources**.
-* Runs jobs on **EC2 or Fargate**, including Docker containers.
-* Ideal for **scientific modeling, simulations, data transformation**.
+- Dynamically provisions **compute resources**.
+- Runs jobs on **EC2 or Fargate**, including Docker containers.
+- Ideal for **scientific modeling, simulations, data transformation**.
 
 ▸ **Use Case**: Process large volumes of **batch jobs** like rendering or big data processing.
 
@@ -1415,9 +1423,9 @@ AWS offers **fully managed** and **self-managed** database options for both **SQ
 
 #### ▸ Key Points:
 
-* Managed services: **RDS, DynamoDB, Aurora**
-* Self-managed: You install/manage databases on **EC2**
-* Scalable, durable, with backups and high availability
+- Managed services: **RDS, DynamoDB, Aurora**
+- Self-managed: You install/manage databases on **EC2**
+- Scalable, durable, with backups and high availability
 
 ▸ **Use Case**: Store and manage application data, user data, transactions, logs, etc.
 
@@ -1429,12 +1437,12 @@ NoSQL databases are designed for **unstructured, semi-structured**, or **rapidly
 
 #### ▸ AWS Example:
 
-* **Amazon DynamoDB** (fully managed NoSQL key-value store)
+- **Amazon DynamoDB** (fully managed NoSQL key-value store)
 
-  * Microsecond latency
-  * Serverless
-  * Auto-scaling
-  * Built-in security and backup
+  - Microsecond latency
+  - Serverless
+  - Auto-scaling
+  - Built-in security and backup
 
 ▸ **Use Case**: Real-time gaming, IoT, mobile apps, user sessions.
 
@@ -1448,10 +1456,10 @@ Fully managed **relational database service** for common engines:
 
 #### ▸ Key Features:
 
-* Automated **backups**, **patching**, **failover**, **monitoring**
-* **Multi-AZ deployment** for high availability
-* **Read Replicas** for scalability
-* **Encryption at rest & in transit**
+- Automated **backups**, **patching**, **failover**, **monitoring**
+- **Multi-AZ deployment** for high availability
+- **Read Replicas** for scalability
+- **Encryption at rest & in transit**
 
 ▸ **Use Case**: Traditional applications needing ACID-compliant relational databases.
 
@@ -1463,10 +1471,10 @@ A **MySQL/PostgreSQL-compatible** RDS engine built by AWS — offers **performan
 
 #### ▸ Key Features:
 
-* 5x faster than MySQL, 3x faster than PostgreSQL
-* **Auto-scaling storage**
-* Up to **15 read replicas**
-* Fault-tolerant and self-healing
+- 5x faster than MySQL, 3x faster than PostgreSQL
+- **Auto-scaling storage**
+- Up to **15 read replicas**
+- Fault-tolerant and self-healing
 
 ▸ **Use Case**: Modern high-throughput apps needing **enterprise-grade relational DB** performance with full compatibility.
 
@@ -1478,9 +1486,9 @@ Creates **read-only copies** of a database to offload **read traffic** and impro
 
 #### ▸ Key Points:
 
-* Not used for **failover** (except in Aurora)
-* Can create multiple replicas in same or different regions
-* Replication is **asynchronous**
+- Not used for **failover** (except in Aurora)
+- Can create multiple replicas in same or different regions
+- Replication is **asynchronous**
 
 ▸ **Use Case**: **High-traffic applications** with more reads than writes (e.g., analytics dashboards, reporting tools).
 
@@ -1494,8 +1502,8 @@ A setup where an RDS instance (usually **Read Replica**) is created in **another
 
 #### ▸ Key Features:
 
-* Provides **disaster recovery**, **data locality**, and **latency reduction**
-* Not automatic failover (unless you use **Aurora Global Database**)
+- Provides **disaster recovery**, **data locality**, and **latency reduction**
+- Not automatic failover (unless you use **Aurora Global Database**)
 
 ▸ **Use Case**: Mission-critical applications needing **geo-redundancy** or **faster global access** to relational DBs.
 
@@ -1509,13 +1517,13 @@ A **fully managed in-memory cache** service for **speeding up data access**.
 
 #### ▸ Supported Engines:
 
-* **Redis**: Cache + pub/sub + streams + geospatial
-* **Memcached**: Simple in-memory key-value store
+- **Redis**: Cache + pub/sub + streams + geospatial
+- **Memcached**: Simple in-memory key-value store
 
 #### ▸ Benefits:
 
-* **Microsecond latency**
-* Reduces load on primary DB (RDS or DynamoDB)
+- **Microsecond latency**
+- Reduces load on primary DB (RDS or DynamoDB)
 
 ▸ **Use Case**: Caching frequently accessed data (e.g., sessions, product catalogs, leaderboards).
 
@@ -1527,17 +1535,17 @@ A **fully managed in-memory cache** service for **speeding up data access**.
 
 A **NoSQL key-value and document database** with:
 
-* **Serverless architecture**
-* **Millisecond latency at scale**
-* **Auto-scaling**, **on-demand mode**
+- **Serverless architecture**
+- **Millisecond latency at scale**
+- **Auto-scaling**, **on-demand mode**
 
 #### ▸ Core Features:
 
-* Point-in-time recovery
-* Encryption at rest
-* Backup & restore
-* Global Tables
-* Streams (change tracking)
+- Point-in-time recovery
+- Encryption at rest
+- Backup & restore
+- Global Tables
+- Streams (change tracking)
 
 ▸ **Use Case**: IoT, mobile apps, gaming, shopping carts, user data.
 
@@ -1551,9 +1559,9 @@ An **in-memory caching layer** for DynamoDB that **reduces read latency** from m
 
 #### ▸ Key Features:
 
-* Fully managed
-* Write-through caching (DAX handles consistency)
-* No code change to existing DynamoDB calls (uses DAX SDK)
+- Fully managed
+- Write-through caching (DAX handles consistency)
+- No code change to existing DynamoDB calls (uses DAX SDK)
 
 ▸ **Use Case**: **Read-heavy workloads** that need ultra-fast performance (e.g., recommendation engines).
 
@@ -1567,9 +1575,9 @@ A **multi-region, multi-active replication** setup for DynamoDB tables.
 
 #### ▸ Key Features:
 
-* **Active-active replication** (can write from multiple regions)
-* Automatically replicates data across specified regions
-* Ideal for high availability and low-latency access globally
+- **Active-active replication** (can write from multiple regions)
+- Automatically replicates data across specified regions
+- Ideal for high availability and low-latency access globally
 
 ▸ **Use Case**: Global applications requiring **real-time, multi-region writes** (e.g., collaborative apps, gaming).
 
@@ -1583,10 +1591,10 @@ A **fully managed data warehouse** service for **analytical querying (OLAP)** of
 
 #### ▸ Key Features:
 
-* Uses **SQL-like queries**
-* Columnar storage + compression = **fast performance**
-* Integrates with **S3 (Spectrum), QuickSight, Glue**
-* Redshift Serverless: No infrastructure to manage
+- Uses **SQL-like queries**
+- Columnar storage + compression = **fast performance**
+- Integrates with **S3 (Spectrum), QuickSight, Glue**
+- Redshift Serverless: No infrastructure to manage
 
 ▸ **Use Case**: Business Intelligence, dashboards, big data analytics.
 
@@ -1600,9 +1608,9 @@ A **big data platform** that runs open-source frameworks like **Apache Spark, Ha
 
 #### ▸ Key Features:
 
-* Run data processing jobs on **EC2 or Spot instances**
-* Auto-scaling and optimized pricing
-* Works with **S3, DynamoDB, Redshift**
+- Run data processing jobs on **EC2 or Spot instances**
+- Auto-scaling and optimized pricing
+- Works with **S3, DynamoDB, Redshift**
 
 ▸ **Use Case**: Large-scale **data transformation**, **ETL**, **log analysis**, **machine learning preprocessing**.
 
@@ -1616,9 +1624,9 @@ A **serverless query service** to analyze data directly in **Amazon S3 using SQL
 
 #### ▸ Key Features:
 
-* No infrastructure to manage
-* Pay per query (based on data scanned)
-* Integrated with **QuickSight**, **Glue Data Catalog**
+- No infrastructure to manage
+- Pay per query (based on data scanned)
+- Integrated with **QuickSight**, **Glue Data Catalog**
 
 ▸ **Use Case**: Fast ad-hoc querying of S3-stored CSV, JSON, Parquet, etc., without loading into a database.
 
@@ -1632,9 +1640,9 @@ A **business intelligence (BI) and data visualization** tool like Tableau or Pow
 
 #### ▸ Key Features:
 
-* Connects to **Redshift, Athena, S3, RDS**
-* Supports **ML-powered insights** (AutoNarratives)
-* Accessible via web browser or app
+- Connects to **Redshift, Athena, S3, RDS**
+- Supports **ML-powered insights** (AutoNarratives)
+- Accessible via web browser or app
 
 ▸ **Use Case**: Creating **dashboards, KPIs, and reports** for decision-making across business teams.
 
@@ -1648,9 +1656,9 @@ A **fully managed document database** designed to store, query, and index **JSON
 
 #### ▸ Key Features:
 
-* Scalable, highly available, secure
-* Used in apps that need flexible document structures
-* Built for **semi-structured** data
+- Scalable, highly available, secure
+- Used in apps that need flexible document structures
+- Built for **semi-structured** data
 
 ▸ **Use Case**: Content management systems, catalogs, user profiles — anything needing a **document-style database**.
 
@@ -1664,13 +1672,13 @@ A **fully managed graph database** optimized for **connected data** and relation
 
 #### ▸ Supported Graph Models:
 
-* **Property Graph** (via Apache TinkerPop / Gremlin)
-* **RDF / SPARQL** (semantic web queries)
+- **Property Graph** (via Apache TinkerPop / Gremlin)
+- **RDF / SPARQL** (semantic web queries)
 
 #### ▸ Key Features:
 
-* Low-latency performance for traversing millions of relationships
-* Used for **social networks, recommendation engines, fraud detection**
+- Low-latency performance for traversing millions of relationships
+- Used for **social networks, recommendation engines, fraud detection**
 
 ▸ **Use Case**: Apps that need fast, complex relationship queries like **"friends of friends"**, or **knowledge graphs**.
 
@@ -1684,9 +1692,9 @@ A **serverless time series database** for IoT and operational applications.
 
 #### ▸ Key Features:
 
-* Optimized for **time-stamped data** (e.g., metrics, logs)
-* Automatic storage tiering (recent = fast, old = cheap)
-* Built-in **data lifecycle management**
+- Optimized for **time-stamped data** (e.g., metrics, logs)
+- Automatic storage tiering (recent = fast, old = cheap)
+- Built-in **data lifecycle management**
 
 ▸ **Use Case**: **IoT sensor data**, **app performance metrics**, **log analytics**, **devops monitoring**.
 
@@ -1698,14 +1706,14 @@ A **serverless time series database** for IoT and operational applications.
 
 A **fully managed service for creating and managing blockchain networks** using:
 
-* **Hyperledger Fabric**
-* **Ethereum (retired)**
+- **Hyperledger Fabric**
+- **Ethereum (retired)**
 
 #### ▸ Key Features:
 
-* Decentralized ledger
-* Tamper-proof transactions
-* Access control for participants
+- Decentralized ledger
+- Tamper-proof transactions
+- Access control for participants
 
 ▸ **Use Case**: **Supply chain**, **healthcare records**, **finance consortia** requiring transparency and trust.
 
@@ -1719,10 +1727,10 @@ A **fully managed ETL (Extract, Transform, Load)** service used to prepare and m
 
 #### ▸ Key Features:
 
-* **Serverless** data integration
-* Supports **PySpark** & **Python**
-* Has a **Data Catalog**
-* **Glue Studio**: No-code visual ETL builder
+- **Serverless** data integration
+- Supports **PySpark** & **Python**
+- Has a **Data Catalog**
+- **Glue Studio**: No-code visual ETL builder
 
 ▸ **Use Case**: Clean, transform, and load data into **data lakes (S3)** or **data warehouses (Redshift)**.
 
@@ -1736,9 +1744,9 @@ A platform to **build, host, and manage full-stack web and mobile apps** using A
 
 #### ▸ Key Features:
 
-* Easy integration with **React, Angular, Vue, Flutter**
-* Auto-deploy from GitHub/Bitbucket
-* Authentication, storage, API, hosting — all managed
+- Easy integration with **React, Angular, Vue, Flutter**
+- Auto-deploy from GitHub/Bitbucket
+- Authentication, storage, API, hosting — all managed
 
 ▸ **Use Case**: **Frontend/backend apps**, **JAMstack** apps, mobile backends.
 
@@ -1752,9 +1760,9 @@ A **fully managed service for GraphQL APIs** that lets apps query data from mult
 
 #### ▸ Key Features:
 
-* Supports **GraphQL**, integrates with **Lambda, DynamoDB, RDS, OpenSearch**
-* Real-time data via **subscriptions**
-* Offline data sync for mobile apps
+- Supports **GraphQL**, integrates with **Lambda, DynamoDB, RDS, OpenSearch**
+- Real-time data via **subscriptions**
+- Offline data sync for mobile apps
 
 ▸ **Use Case**: Unified APIs for mobile/web apps that pull from different AWS data sources.
 
@@ -1768,9 +1776,9 @@ A **configuration management** service that uses **Chef and Puppet** to automate
 
 #### ▸ Key Features:
 
-* Automates infrastructure as code
-* Manages EC2 instances and on-prem servers
-* Can configure EBS, Auto Scaling, and ELBs
+- Automates infrastructure as code
+- Manages EC2 instances and on-prem servers
+- Can configure EBS, Auto Scaling, and ELBs
 
 ▸ **Use Case**: Teams already using **Chef/Puppet** and need automated config management.
 
@@ -1784,10 +1792,10 @@ A service for **user authentication, authorization, and user management** in app
 
 ###$ ▸ Key Features:
 
-* Sign-up, sign-in, password reset
-* Social logins (Google, Facebook, Apple)
-* Federated identity + SSO
-* Token-based auth (OAuth2, OpenID Connect)
+- Sign-up, sign-in, password reset
+- Social logins (Google, Facebook, Apple)
+- Federated identity + SSO
+- Token-based auth (OAuth2, OpenID Connect)
 
 ▸ **Use Case**: Web/mobile apps needing secure and scalable **user login systems** without building one from scratch.
 
@@ -1801,10 +1809,10 @@ A **browser-based IDE** for writing, running, and debugging code using just a br
 
 #### ▸ Key Features:
 
-* Pre-installed SDKs, CLI tools
-* Collaborate in real-time
-* Integrated terminal with AWS CLI
-* No setup required — runs on EC2 or Lambda
+- Pre-installed SDKs, CLI tools
+- Collaborate in real-time
+- Integrated terminal with AWS CLI
+- No setup required — runs on EC2 or Lambda
 
 ▸ **Use Case**: Cloud-native development environment for **Python, Node.js, C++, etc.**, accessible from any device.
 
@@ -1818,14 +1826,90 @@ An **all-in-one development dashboard** that helps teams quickly start and manag
 
 #### ▸ Key Features:
 
-* Templates for common app stacks (Node.js, Python, Java, etc.)
-* Auto-integrates with **CodeCommit, CodePipeline, CodeDeploy**
-* Centralized DevOps management
+- Templates for common app stacks (Node.js, Python, Java, etc.)
+- Auto-integrates with **CodeCommit, CodePipeline, CodeDeploy**
+- Centralized DevOps management
 
 ▸ **Use Case**: Teams looking to quickly spin up an **end-to-end CI/CD pipeline** with monitoring.
 
 ---
 
+### **116. AWS IAM Access Analyzer**
 
+#### ▸ What It Is:
 
+A **security tool** that helps you **identify resources in your AWS account that are shared externally** (outside your org or publicly accessible).
 
+#### ▸ Key Features:
+
+- Works with IAM, S3, KMS, SQS, etc.
+- Shows external access to roles, buckets, etc.
+- Helps maintain **least-privilege access**
+
+▸ **Use Case**: Security auditing to detect **unintended public exposure**.
+
+---
+
+### **117. Amazon QLDB (Quantum Ledger Database)**
+
+#### ▸ What It Is:
+
+A **ledger database** for applications that need an **immutable, cryptographically verifiable record of transactions**.
+
+#### ▸ Key Features:
+
+- Immutable and **append-only** (you can’t delete/change history)
+- Verifiable with cryptographic hashes
+- Fully managed
+
+▸ **Use Case**: Financial, supply chain, or legal systems where **auditability** is required without using blockchain.
+
+---
+
+### **118. Amazon Lightsail**
+
+#### ▸ What It Is:
+
+A **simple VPS (Virtual Private Server)** service designed for **easy deployment of websites, blogs, and apps**.
+
+#### ▸ Key Features:
+
+- Pre-configured with WordPress, Node.js, LAMP, etc.
+- Fixed pricing
+- Built-in DNS, static IP, snapshots
+
+▸ **Use Case**: Small businesses, students, or developers who need **a simpler alternative to EC2**.
+
+---
+
+### **119. Amazon Rekognition**
+
+#### ▸ What It Is:
+
+A **computer vision service** that uses AI to analyze **images and videos**.
+
+#### ▸ Key Features:
+
+- Face detection and recognition
+- Object and scene detection
+- Celebrity recognition, unsafe content detection
+
+▸ **Use Case**: Security cams, facial access, content moderation, photo tagging.
+
+---
+
+### **120. Amazon Transcribe**
+
+#### ▸ What It Is:
+
+A **speech-to-text service** that uses AI to **convert audio to written text**.
+
+#### ▸ Key Features:
+
+- Real-time or batch transcription
+- Speaker identification
+- Custom vocabulary
+
+▸ **Use Case**: Transcribe **customer calls**, **video subtitles**, or **voice-enabled apps**.
+
+---
