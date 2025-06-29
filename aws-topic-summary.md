@@ -138,3 +138,8 @@
 | 134.      | **Cognito**                     | Provides user authentication and authorization (OAuth, SSO, etc.)                                                                   |
 | 135.      | **Cloud9**                      | Cloud-based IDE for coding directly in the browser                                                                                  |
 | 136.      | **CodeStar**                    | Orchestrates CI/CD pipelines for rapid full-stack app development                                                                   |
+| 137.      | **IAM Access Analyzer**         | Identifies external/shared access to AWS resources for security auditing                                                            |
+| 138.      | **Amazon QLDB**                 | Ledger database for immutable, cryptographically verifiable records                                                                 |
+| 139.      | **Amazon Lightsail**            | Easy-to-use VPS for web hosting and app deployment                                                                                  |
+| 140.      | **Amazon Rekognition**          | AI service for facial recognition and image/video analysis                                                                          |
+| 141.      | **Amazon Transcribe**           | Converts speech to text for applications and transcription use cases                                                                |
