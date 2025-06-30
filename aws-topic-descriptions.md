@@ -1913,3 +1913,88 @@ A **speech-to-text service** that uses AI to **convert audio to written text**.
 ▸ **Use Case**: Transcribe **customer calls**, **video subtitles**, or **voice-enabled apps**.
 
 ---
+
+### **121. Amazon Polly**
+
+#### ▸ What It Is:
+
+A **Text-to-Speech (TTS)** service that converts written text into **lifelike spoken audio** using AI.
+
+#### ▸ Key Features:
+
+- Supports **multiple languages and voices**
+- Offers **Neural TTS (NTTS)** for realistic voice output
+- Allows speech synthesis to MP3, OGG, etc.
+
+▸ **Use Case**: Voice assistants, reading apps, accessibility (screen readers), voice-enabled apps.
+
+---
+
+### **122. Amazon Translate**
+
+#### ▸ What It Is:
+
+A **real-time language translation service** powered by neural networks.
+
+#### ▸ Key Features:
+
+- Supports **100+ languages**
+- Can translate plain text or HTML documents
+- Scalable and secure — used in multilingual apps or sites
+
+▸ **Use Case**: Real-time **language localization** for global web apps, chat systems, or documentation.
+
+---
+
+### **123. Amazon Lex & Amazon Connect**
+
+#### ▸ **Amazon Lex**
+
+- A service to **build conversational chatbots** using **voice and text**.
+- Uses same deep learning as Alexa (speech recognition + NLU).
+- Works with **Lambda**, **DynamoDB**, etc.
+
+▸ Use Case: Build **AI chatbots** for support, sales, bookings, etc.
+
+#### ▸ **Amazon Connect**
+
+- A **cloud-based contact center** solution.
+- Integrates with Lex, Lambda, and other AWS services.
+- Automatically scales up/down with usage.
+
+▸ Use Case: Run a **call center** with AI voice agents and customer support chatbots.
+
+---
+
+### **124. Amazon Comprehend**
+
+#### ▸ What It Is:
+
+A **natural language processing (NLP)** service that understands **text content**.
+
+#### ▸ Key Features:
+
+- Detects **sentiment**, **entities**, **key phrases**, **language**
+- Topic modeling and document classification
+- Works on structured or unstructured text
+
+▸ **Use Case**: Analyze **customer feedback**, emails, social media, or support tickets.
+
+---
+
+### **125. Amazon SageMaker**
+
+#### ▸ What It Is:
+
+A **fully managed machine learning platform** to build, train, and deploy ML models at scale.
+
+#### ▸ Key Features:
+
+- Jupyter-based notebooks
+- AutoML, built-in algorithms
+- Real-time and batch inference
+- MLOps support (monitoring, pipelines)
+
+▸ **Use Case**: For **data scientists or ML engineers** building custom prediction models for fraud detection, recommendation engines, etc.
+
+---
