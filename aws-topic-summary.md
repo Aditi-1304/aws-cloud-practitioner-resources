@@ -143,3 +143,9 @@
 | 139.      | **Amazon Lightsail**            | Easy-to-use VPS for web hosting and app deployment                                                                                  |
 | 140.      | **Amazon Rekognition**          | AI service for facial recognition and image/video analysis                                                                          |
 | 141.      | **Amazon Transcribe**           | Converts speech to text for applications and transcription use cases                                                                |
+| 142.      | **Polly**                       | Converts text to lifelike speech for voice-enabled applications                                                                     |
+| 143.      | **Translate**                   | Automatically translates text to support multilingual applications                                                                  |
+| 144.      | **Lex**                         | Builds conversational chatbots using voice and text                                                                                 |
+| 145.      | **Connect**                     | Cloud-based contact center with AI support features                                                                                 |
+| 146.      | **Comprehend**                  | Analyzes text for sentiment, entities, and language insights                                                                        |
+| 147.      | **SageMaker**                   | End-to-end platform to build, train, and deploy machine learning models                                                             |
