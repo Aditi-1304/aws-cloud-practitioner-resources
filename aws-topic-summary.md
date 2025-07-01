@@ -149,3 +149,9 @@
 | 145.      | **Connect**                     | Cloud-based contact center with AI support features                                                                                 |
 | 146.      | **Comprehend**                  | Analyzes text for sentiment, entities, and language insights                                                                        |
 | 147.      | **SageMaker**                   | End-to-end platform to build, train, and deploy machine learning models                                                             |
+| 148.      | **Amazon Kendra**               | AI-powered search across documents and knowledge bases                                                                              |
+| 149.      | **Amazon Personalize**          | Provides real-time product and content recommendations                                                                              |
+| 150.      | **Amazon Textract**             | Extracts text, tables, and data from scanned documents using AI                                                                     |
+| 151.      | **Cost & Usage Reports**        | Offers detailed billing and usage data for analysis                                                                                 |
+| 152.      | **AWS Budgets**                 | Tracks costs and usage with custom alerts                                                                                           |
+| 153.      | **API Gateway**                 | Builds, manages, and secures scalable APIs                                                                                          |
