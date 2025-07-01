@@ -1998,3 +1998,99 @@ A **fully managed machine learning platform** to build, train, and deploy ML mod
 ▸ **Use Case**: For **data scientists or ML engineers** building custom prediction models for fraud detection, recommendation engines, etc.
 
 ---
+
+### **126. Amazon Kendra**
+
+#### ▸ What It Is:
+
+An **intelligent enterprise search service** powered by ML that helps users search **unstructured data** across multiple data sources.
+
+#### ▸ Key Features:
+
+- Connects to **SharePoint, S3, RDS, Salesforce, etc.**
+- Understands **natural language queries**
+- Delivers **contextual and ranked results**
+
+▸ **Use Case**: Internal company knowledge base or documentation search.
+
+---
+
+### **127. Amazon Personalize**
+
+#### ▸ What It Is:
+
+A **real-time recommendation engine** service based on the tech used by Amazon.com.
+
+#### ▸ Key Features:
+
+- No ML expertise required
+- Takes in user behavior (clicks, views, etc.)
+- Outputs personalized **product, content, or search** recommendations
+
+▸ **Use Case**: E-commerce sites, streaming platforms, or news apps.
+
+---
+
+### **128. Amazon Textract**
+
+#### ▸ What It Is:
+
+A **document AI service** that automatically extracts **text, tables, and forms** from scanned documents and PDFs.
+
+#### ▸ Key Features:
+
+- Detects printed and handwritten text
+- Extracts **structured data** from invoices, IDs, etc.
+- Integrates with **Comprehend** for document classification
+
+▸ **Use Case**: Automate **form/data extraction** from scanned documents.
+
+---
+
+### **129. AWS Cost and Usage Reports (CUR)**
+
+#### ▸ What It Is:
+
+A detailed **CSV/Parquet report** that includes **hourly, daily, or monthly cost and usage data** for your AWS services.
+
+#### ▸ Key Features:
+
+- Delivered to S3
+- Can be analyzed with **Athena, Redshift, QuickSight**
+- Used for **cost allocation, chargeback, or trend analysis**
+
+▸ **Use Case**: Deep dive into **billing and usage metrics**.
+
+---
+
+### **130. AWS Budgets**
+
+#### ▸ What It Is:
+
+A cost management tool to **set custom budgets** and receive **alerts** when you're forecasted to exceed them.
+
+#### ▸ Key Features:
+
+- Monitor **cost, usage, RI & Savings Plan coverage**
+- Alerts via **email or SNS**
+- Tracks by **service, account, or tag**
+
+▸ **Use Case**: Enforce **spending limits** or notify stakeholders.
+
+---
+
+### **131. Amazon API Gateway**
+
+#### ▸ What It Is:
+
+A fully managed service for creating, publishing, monitoring, and securing **RESTful or WebSocket APIs**.
+
+#### ▸ Key Features:
+
+- Fronts **Lambda, EC2, any backend**
+- Handles **rate limiting, caching, auth (Cognito/IAM)**
+- Scales automatically
+
+▸ **Use Case**: Build **serverless APIs** (especially for mobile/web apps) easily.
+
+---
