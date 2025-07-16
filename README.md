@@ -7,6 +7,7 @@ This repository contains curated resources to help you prepare for the **AWS Cer
 ## 🎯 Purpose
 
 The goal of this repository is to:
+
 - Consolidate all important concepts required for the Cloud Practitioner exam.
 - Provide easy-to-digest notes and quick-reference sheets.
 - Offer practice questions and mock tests to evaluate your understanding.
@@ -47,7 +48,7 @@ This repository is actively being updated with new materials and improvements. D
 
 ---
 
-## 🔗 Useful Resources
+## 🔗 Official Useful Resources
 
 - [AWS Cloud Practitioner Exam Guide](https://aws.amazon.com/certification/certified-cloud-practitioner/)
 - [AWS Whitepapers and FAQs](https://aws.amazon.com/whitepapers/)
@@ -58,4 +59,3 @@ This repository is actively being updated with new materials and improvements. D
 ## 📬 Contributions
 
 Feel free to raise issues or pull requests if you'd like to improve or add more resources. Let's make cloud learning better together!
-
