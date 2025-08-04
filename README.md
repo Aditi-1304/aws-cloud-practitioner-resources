@@ -4,7 +4,7 @@ This repository contains curated resources to help you prepare for the **AWS Cer
 
 ---
 
-## 🎯 Purpose
+## Purpose
 
 The goal of this repository is to:
 
@@ -15,7 +15,7 @@ The goal of this repository is to:
 
 ---
 
-## 🧠 Topics Covered
+## Topics Covered
 
 - **Cloud Concepts** – Benefits, models, and economics of cloud computing.
 - **Security and Compliance** – Shared Responsibility Model, IAM, compliance frameworks.
@@ -24,7 +24,7 @@ The goal of this repository is to:
 
 ---
 
-## 📌 What's Included
+## What's Included
 
 - Summarized cheat sheets for quick revision.
 - Detailed topic-wise notes aligned with the exam guide.
@@ -34,7 +34,7 @@ The goal of this repository is to:
 
 ---
 
-## 📖 Ideal For
+## Ideal For
 
 - Students and professionals preparing for the **AWS Certified Cloud Practitioner** exam.
 - Beginners exploring AWS fundamentals and cloud services.
@@ -42,13 +42,13 @@ The goal of this repository is to:
 
 ---
 
-## ✅ Status
+## Status
 
 This repository is actively being updated with new materials and improvements. Daily commits ensure continuous enhancement based on personal study progress and AWS updates.
 
 ---
 
-## 🔗 Official Useful Resources
+## Official Useful Resources
 
 - [AWS Cloud Practitioner Exam Guide](https://aws.amazon.com/certification/certified-cloud-practitioner/)
 - [AWS Whitepapers and FAQs](https://aws.amazon.com/whitepapers/)
@@ -56,6 +56,6 @@ This repository is actively being updated with new materials and improvements. D
 
 ---
 
-## 📬 Contributions
+## Contributions
 
 Feel free to raise issues or pull requests if you'd like to improve or add more resources. Let's make cloud learning better together!
